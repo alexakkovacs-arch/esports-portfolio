@@ -1,32 +1,33 @@
 # Alexa Kovacevich: Esports Portfolio
 
-Personal portfolio for Alexa Kovacevich, a freelance creative in Windsor, Ontario who works on esports events, live broadcast production and marketing. The look comes from Alexa's Canva portfolio: fuchsia, black and cream, in a loud "anti-design" style.
+Personal portfolio for Alexa Kovacevich, with the original fuchsia, black and cream anti-design visual identity preserved from lexkk.com.
 
-## What's on the site
+## Pages
 
-- **Home (`/`)**: hero and intro, a skills ticker and skill cards, the featured Sakura Anime Fest event with its numbers, the project grid, awards and nominations, a partner logo wall, and a contact call to action.
-- **Project pages (`/work/:slug`)**: one case study per project, with roles, write-ups, graphics galleries and embedded YouTube videos. Current projects are St. Clair Saints, Saints Gauntlet Series, NA Rise + NA Premier, League Impact Series, CIE, CLOL Championships, Cupid Esports and Sakura Anime Fest.
-- **Contact (`/contact`)**: email, phone, social links and a contact form that saves submissions with Netlify Forms.
+- **Home (`/`)**: skills, featured event, projects, awards, partners, contact CTA.
+- **Project pages (`/work/:slug`)**: case studies, photos, graphics and YouTube videos.
+- **Events (`/events`)**: history of esports events and broadcasts.
+- **Contact (`/contact`)**: opens an email draft. GitHub Pages cannot process form submissions; the visitor must press Send in their email app.
 
-## Tech
+## Hosting
 
-- [TanStack Start](https://tanstack.com/start) (React 19) with file-based routing
-- Tailwind CSS v4 (theme tokens live in `src/styles.css`)
-- Netlify Forms for the contact form
-- Netlify Image CDN, so photos are resized and converted to WebP on request
-- Google Fonts: Anton, Archivo, Instrument Serif and Space Mono
+The portfolio is a static React + TanStack Router + Vite website deployed on **GitHub Pages** using `.github/workflows/pages.yml`. No Netlify plan or image CDN is required. Original images are served from `public/img`.
+
+For the initial GitHub Pages repository URL (`https://alexakkovacs-arch.github.io/esports-portfolio/`), the workflow builds with `GITHUB_PAGES_BASE_PATH=/esports-portfolio/`. **When moving lexkk.com**, change the workflow value to `/`, then set `lexkk.com` in repository **Settings → Pages → Custom domain** before updating Namecheap DNS. This prevents premature downtime. In Settings → Pages, set the publish source to **GitHub Actions**.
+
+GitHub Pages is static hosting; project routes are copied to individual `index.html` entry points during build by `scripts/copy-pages.mjs`, so refresh and direct links work.
 
 ## Editing content
 
-All portfolio content is in **`src/data/portfolio.ts`**: projects, sections, photos, videos, awards, partners and skills. Contact details and social links are in `src/lib/site.ts`. Images are stored in `public/img/`; logos are in `public/img/logos/` and decorative shapes are in `public/img/shapes/`.
+All projects, awards, skills and partner entries live in `src/data/portfolio.ts`. Personal contact links are in `src/lib/site.ts`; event history is in `src/data/events.ts`. Photos are in `public/img`, logos in `public/img/logos`, and decorative images in `public/img/shapes`.
 
-To add a project, add an entry to the `projects` array with a unique `slug`, and put its images in `public/img/`. Its page at `/work/<slug>` is created automatically.
-
-## Running locally
+## Local development
 
 ```bash
-pnpm install
-netlify dev        # or: pnpm dev (Vite only, no Netlify emulation)
+pnpm install --no-frozen-lockfile
+pnpm dev
 ```
 
-Use `netlify dev` to try the Image CDN URLs and the form locally. Run tests with `pnpm test`.
+To check static output: `pnpm build`. Tests: `pnpm test`.
+
+The migration keeps the original site markup, styles, images, typography and animations; only hosting/asset paths and contact delivery change.
