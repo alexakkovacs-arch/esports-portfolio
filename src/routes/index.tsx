@@ -13,6 +13,7 @@ import {
   toolkit,
 } from '../data/portfolio'
 import { Img } from '../components/Img'
+import { assetUrl } from '../lib/assets'
 import { Marquee } from '../components/Marquee'
 import { ProjectCard } from '../components/ProjectCard'
 
@@ -44,19 +45,19 @@ function Hero() {
     <section className="relative overflow-hidden">
       {/* Floating anti-design shapes */}
       <img
-        src="/img/shapes/burst-blue.svg"
+        src={assetUrl('/img/shapes/burst-blue.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -left-16 top-10 w-48 animate-spin-slow opacity-90 sm:w-64"
       />
       <img
-        src="/img/shapes/flower-gold.svg"
+        src={assetUrl('/img/shapes/flower-gold.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -right-10 bottom-6 w-40 animate-float [--r:12deg] sm:w-56"
       />
       <img
-        src="/img/shapes/blob-tan.svg"
+        src={assetUrl('/img/shapes/blob-tan.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute left-[46%] top-6 hidden w-16 rotate-12 lg:block"
@@ -99,14 +100,14 @@ function Hero() {
 
         <div className="relative mx-auto w-full max-w-md lg:mt-8">
           <img
-            src="/img/shapes/splat-pink.svg"
+            src={assetUrl('/img/shapes/splat-pink.svg')}
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute -left-12 -top-12 w-44 sm:w-56"
           />
           <figure className="brutal tape relative rotate-3 p-3">
             <Img
-              src="/img/alexa-speaking.jpg"
+              src={assetUrl('/img/alexa-speaking.jpg')}
               alt="Alexa Kovacevich speaking at a podium at the St. Clair College Centre for the Arts"
               width={460}
               loading="eager"
@@ -125,7 +126,7 @@ function Hero() {
           </div>
 
           <img
-            src="/img/shapes/sakura.png"
+            src={assetUrl('/img/shapes/sakura.png')}
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute -right-8 -top-10 w-24 animate-float [--r:-10deg]"
@@ -177,7 +178,7 @@ function Featured() {
   return (
     <section className="relative overflow-hidden border-y-[3px] border-ink bg-ink px-4 py-24 text-cream sm:px-6">
       <img
-        src="/img/shapes/sakura.png"
+        src={assetUrl('/img/shapes/sakura.png')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -right-20 -top-16 w-80 animate-spin-slow opacity-80"
@@ -277,7 +278,7 @@ function Awards() {
       className="relative scroll-mt-24 overflow-hidden border-y-[3px] border-ink bg-fuchsia px-4 py-24 sm:px-6"
     >
       <img
-        src="/img/shapes/burst-blue.svg"
+        src={assetUrl('/img/shapes/burst-blue.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-20 -right-16 w-72 animate-spin-slow"
@@ -294,7 +295,7 @@ function Awards() {
           </ul>
           <figure className="brutal mt-10 hidden max-w-sm -rotate-2 p-3 lg:block">
             <Img
-              src="/img/alexa-podium.jpg"
+              src={assetUrl('/img/alexa-podium.jpg')}
               alt="Alexa speaking at a podium during an awards ceremony"
               width={420}
               className="aspect-[4/3] w-full object-cover"
@@ -360,7 +361,7 @@ function ContactCta() {
     <section className="px-4 pb-24 sm:px-6">
       <div className="brutal relative mx-auto max-w-7xl overflow-hidden bg-cream p-8 sm:p-14">
         <img
-          src="/img/shapes/pixel-hand.png"
+          src={assetUrl('/img/shapes/pixel-hand.png')}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-6 right-6 hidden w-36 rotate-[-14deg] md:block"
