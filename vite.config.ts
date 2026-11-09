@@ -1,17 +1,15 @@
 import { defineConfig } from 'vite'
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import { env } from 'node:process'
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import netlify from '@netlify/vite-plugin-tanstack-start'
 
-const config = defineConfig({
+export default defineConfig({
+  base: env.GITHUB_PAGES_BASE_PATH || '/',
   resolve: { tsconfigPaths: true },
   plugins: [
     tailwindcss(),
-    netlify(),
-    tanstackStart(),
+    tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     viteReact(),
   ],
 })
-
-export default config
