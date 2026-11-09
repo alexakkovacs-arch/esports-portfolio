@@ -1,8 +1,9 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Outlet, createRootRoute } from '@tanstack/react-router'
 import { SiteHeader } from '../components/SiteHeader'
 import { NotFoundPage } from '../components/NotFoundPage'
 import { SiteFooter } from '../components/SiteFooter'
 import { site } from '../lib/site'
+import { assetUrl } from '../lib/assets'
 
 import '../styles.css'
 
@@ -46,7 +47,7 @@ export const Route = createRootRoute({
       { name: 'theme-color', content: '#ff86c8' },
     ],
     links: [
-      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'icon', type: 'image/svg+xml', href: assetUrl('/favicon.svg') },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
         rel: 'preconnect',
@@ -59,29 +60,24 @@ export const Route = createRootRoute({
       },
     ],
   }),
-  shellComponent: RootDocument,
+  component: RootDocument,
 })
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument() {
   return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:border-[3px] focus:border-ink focus:bg-fuchsia focus:p-4 focus:font-mono"
-        >
-          Skip to content
-        </a>
-        <SiteHeader />
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-        <SiteFooter />
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <HeadContent />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:border-[3px] focus:border-ink focus:bg-fuchsia focus:p-4 focus:font-mono"
+      >
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main id="main-content" tabIndex={-1}>
+        <Outlet />
+      </main>
+      <SiteFooter />
+    </>
   )
 }
