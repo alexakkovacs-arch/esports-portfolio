@@ -375,6 +375,7 @@ export type Award = {
 }
 
 export const awards: Award[] = [
+  { result: 'Winner', title: 'NACE Student Leadership Award', recipient: 'Alexa Kovacevich', year: 2026 },
   { result: 'Winner', title: 'Director’s Award', recipient: 'Alexa Kovacevich', year: 2026 },
   { result: 'Winner', title: 'Marketing Team Member of the Year', recipient: 'Alexa Kovacevich', year: 2025 },
   { result: 'Finalist', title: 'Social Media Producer of the Year', recipient: 'Alexa Kovacevich', year: 2025 },
