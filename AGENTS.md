@@ -1,18 +1,18 @@
 # AGENTS.md
 
-This is the personal portfolio of Alexa Kovacevich (esports events, production and marketing). It is built with TanStack Start, React 19 and Tailwind v4, and deploys on Netlify. It has no database or auth. The only server-side feature is Netlify Forms.
+This is the personal portfolio of Alexa Kovacevich (esports events, production and marketing). It is built with TanStack Router SPA, React 19, Vite and Tailwind v4, and deploys as static files on GitHub Pages. It has no database, auth, or server features.
 
 ## Architecture
 
 - `src/data/portfolio.ts` is the **single source of content**: the `projects` array (with sections, photos and videos), `awards`, `partners`, `skills`, `toolkit` and `featuredSlug`. Change copy here, not in components.
 - `src/lib/site.ts` holds identity, contact details, social links and `pageMeta()` for per-route `<head>` tags.
-- `src/lib/img.ts` and `src/components/Img.tsx` build every raster image URL through the Netlify Image CDN (`/.netlify/images?url=…&w=…&fm=webp`) with a srcset. SVGs pass through unchanged. Always use `<Img>` for photos; don't link directly to `/img/*.jpg`.
+- `src/lib/img.ts`, `src/lib/assets.ts`, and `src/components/Img.tsx` resolve images from `public/img` with the correct GitHub Pages base URL. There is no image CDN. Always use `<Img>` for photos and `assetUrl()` for decorative asset paths.
 - Routes:
   - `src/routes/index.tsx`: one-page home made of section components (Hero, Skills, Featured, Work, Awards, Partners, ContactCta). The header links to them with anchors (`#skills`, `#work`, `#awards`, `#partners`).
   - `src/routes/work/$slug.tsx`: project case study. The loader calls `notFound()` for unknown slugs.
-  - `src/routes/contact.tsx` with `src/components/ContactForm.tsx`: the Netlify Forms contact form.
-  - `src/routes/__root.tsx`: shell, Google Fonts, `SiteHeader`, `SiteFooter`.
-- `public/contact.html` is the static form registration that Netlify detects at deploy. Keep its field names (`name`, `email`, `message`, `bot-field`, `form-name=contact`) in sync with `ContactForm.tsx`. The test in `ContactForm.test.tsx` depends on the labels "Name", "Email" and "Message" and the button text "Send message".
+  - `src/routes/contact.tsx` with `src/components/ContactForm.tsx`: a static contact form opening a visitor's email draft. Do not claim a message is delivered automatically.
+  - `src/routes/__root.tsx`: SPA shell, Google Fonts, `SiteHeader`, `SiteFooter`.
+- `src/components/ContactForm.test.tsx` checks that the contact form opens a mail draft without claiming delivery. GitHub Pages has no built-in contact form backend.
 
 ## Design system
 
@@ -26,4 +26,4 @@ This is the personal portfolio of Alexa Kovacevich (esports events, production a
 - Images and copy came from Alexa's existing Canva site. Photos were re-encoded to JPG at 1400px or less before being committed. Some project and photo pairings were inferred, especially for CIE, League Impact Series and NA Rise + NA Premier (Division ONE). The CIE write-up and the League Impact Series "Broadcast Lead" role label are placeholders for Alexa to confirm.
 - Award organizations aren't attached to individual awards because the source doesn't map them clearly. `awardBodies` lists them as a group.
 - The template's blog, résumé and content-collections setup were removed on purpose. Don't reintroduce Markdown collections unless the owner asks for a blog.
-- Don't run build or typecheck commands in agent sessions. The Netlify pipeline validates builds.
+- The GitHub Actions workflow validates builds on pull requests and deploys the `dist` directory from `main`. Keep the migration's GitHub Pages base URL aligned with the chosen domain. Never change Namecheap DNS until the preview has been validated.

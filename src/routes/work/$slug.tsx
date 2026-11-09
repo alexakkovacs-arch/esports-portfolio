@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { accentBg, getProject, projects, type Video } from '../../data/portfolio'
 import { pageMeta } from '../../lib/site'
 import { Img } from '../../components/Img'
+import { assetUrl } from '../../lib/assets'
 
 export const Route = createFileRoute('/work/$slug')({
   loader: ({ params }) => {
@@ -32,7 +33,7 @@ function ProjectPage() {
         className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
         <img
-          src="/img/shapes/burst-blue.svg"
+          src={assetUrl('/img/shapes/burst-blue.svg')}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70"

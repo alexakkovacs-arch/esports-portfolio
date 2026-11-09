@@ -1,49 +1,35 @@
-import { useRef, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { Mail, Phone, Send } from 'lucide-react'
 import { site } from '../lib/site'
+import { assetUrl } from '../lib/assets'
 
 export function ContactForm() {
-  const [status, setStatus] = useState<
-    'idle' | 'pending' | 'error' | 'success'
-  >('idle')
-  const submitting = useRef(false)
+  const [draftOpened, setDraftOpened] = useState(false)
 
-  async function submit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (submitting.current || status === 'success') return
-    const body = new URLSearchParams()
-    new FormData(event.currentTarget).forEach((value, key) =>
-      body.append(key, String(value)),
-    )
-    submitting.current = true
-    setStatus('pending')
-    try {
-      const response = await fetch('/contact.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString(),
-        signal: AbortSignal.timeout(15000),
-      })
-      if (!response.ok || /\bdata-netlify\s*=/i.test(await response.text()))
-        throw new Error('Message was not accepted')
-      setStatus('success')
-    } catch {
-      setStatus('error')
-    } finally {
-      submitting.current = false
-    }
+    const fields = new FormData(event.currentTarget)
+    const name = String(fields.get('name') ?? '').trim()
+    const email = String(fields.get('email') ?? '').trim()
+    const message = String(fields.get('message') ?? '').trim()
+    if (!name || !email || !message) return
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
+    const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`)
+    window.open(`mailto:${site.email}?subject=${subject}&body=${body}`, '_self')
+    // A static site cannot confirm delivery. Explain that the visitor must send.
+    setDraftOpened(true)
   }
 
   return (
     <div className="relative overflow-hidden px-4 py-16 sm:px-6 lg:py-24">
       <img
-        src="/img/shapes/splat-pink.svg"
+        src={assetUrl('/img/shapes/splat-pink.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -left-20 top-20 w-64 opacity-90"
       />
       <img
-        src="/img/shapes/flower-gold.svg"
+        src={assetUrl('/img/shapes/flower-gold.svg')}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -right-12 bottom-10 w-48 animate-float [--r:10deg]"
@@ -76,112 +62,46 @@ export function ContactForm() {
           </ul>
         </div>
         <div className="brutal rotate-1 bg-white p-6 sm:p-10">
-      {status === 'success' ? (
-        <div className="text-center py-8">
-          <Mail aria-hidden="true" className="mx-auto mb-4 size-10 text-fuchsia-hot" />
-          <h2 className="display mb-3 text-5xl">Message received</h2>
-          <p role="status" className="mb-6">
-            Thanks for reaching out. Your message was accepted.
-          </p>
-          <button
-            type="button"
-            className="contact-button btn btn-pink"
-            onClick={() => setStatus('idle')}
-          >
-            Send another message
-          </button>
-        </div>
-      ) : (
-        <form
-          name="contact"
-          method="POST"
-          action="/contact.html"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          aria-busy={status === 'pending'}
-          onSubmit={submit}
-          className="space-y-6"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Leave this empty
-              <input name="bot-field" tabIndex={-1} autoComplete="off" />
-            </label>
-          </p>
-          <fieldset
-            disabled={status === 'pending'}
-            className="min-w-0 space-y-6 disabled:opacity-70"
-          >
-            <legend className="sr-only">Your message</legend>
-            <div>
-              <label
-                htmlFor="name"
-                className="eyebrow mb-2 block font-bold"
+          {draftOpened ? (
+            <div className="py-8 text-center">
+              <Mail aria-hidden="true" className="mx-auto mb-4 size-10 text-fuchsia-hot" />
+              <h2 className="display mb-3 text-5xl">One more step</h2>
+              <p role="status" className="mb-6">
+                Your email app should have opened a draft. Please press Send there to deliver your message. If it did not open, use the email link alongside this form.
+              </p>
+              <button
+                type="button"
+                className="contact-button btn btn-pink"
+                onClick={() => setDraftOpened(false)}
               >
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                autoComplete="name"
-                required
-                maxLength={100}
-                className="contact-input"
-                placeholder="Your name"
-              />
+                Write another message
+              </button>
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="eyebrow mb-2 block font-bold"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                maxLength={254}
-                className="contact-input"
-                placeholder="you@team.gg"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="eyebrow mb-2 block font-bold"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                maxLength={5000}
-                rows={6}
-                className="contact-input"
-                placeholder="Your message…"
-              />
-            </div>
-            <button type="submit" className="contact-button btn btn-pink">
-              <Send aria-hidden="true" size={16} />
-              {status === 'pending' ? 'Sending…' : 'Send message'}
-            </button>
-          </fieldset>
-          <p role="status" className="sr-only">
-            {status === 'pending' ? 'Sending your message…' : ''}
-          </p>
-          {status === 'error' && (
-            <p role="alert" className="border-[3px] border-ink bg-gold p-4 text-sm">
-              We couldn’t confirm your message. Your details are still here;
-              please try again. Local previews don’t process submissions.
-            </p>
+          ) : (
+            <form onSubmit={submit} className="space-y-6">
+              <fieldset className="min-w-0 space-y-6">
+                <legend className="sr-only">Your message</legend>
+                <div>
+                  <label htmlFor="name" className="eyebrow mb-2 block font-bold">Name</label>
+                  <input id="name" name="name" autoComplete="name" required maxLength={100} className="contact-input" placeholder="Your name" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="eyebrow mb-2 block font-bold">Email</label>
+                  <input id="email" name="email" type="email" autoComplete="email" required maxLength={254} className="contact-input" placeholder="you@team.gg" />
+                </div>
+                <div>
+                  <label htmlFor="message" className="eyebrow mb-2 block font-bold">Message</label>
+                  <textarea id="message" name="message" required maxLength={5000} rows={6} className="contact-input" placeholder="Your message…" />
+                </div>
+                <button type="submit" className="contact-button btn btn-pink">
+                  <Send aria-hidden="true" size={16} /> Open email draft
+                </button>
+                <p className="text-sm text-ink/70">
+                  This opens your email app; your message is not sent until you press Send.
+                </p>
+              </fieldset>
+            </form>
           )}
-        </form>
-      )}
         </div>
       </div>
     </div>
