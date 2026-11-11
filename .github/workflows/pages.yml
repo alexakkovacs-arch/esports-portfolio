@@ -31,9 +31,9 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Build portfolio
         env:
-          # Custom domain lexkk.com is served from the site root.
-          # Use root-relative URLs for scripts, styles, images, and routes.
-          GITHUB_PAGES_BASE_PATH: /
+          # Serve assets from the repository path for the GitHub Pages preview.
+          # Change to / only when a custom domain is configured in Pages settings.
+          GITHUB_PAGES_BASE_PATH: /esports-portfolio/
         run: pnpm build
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
