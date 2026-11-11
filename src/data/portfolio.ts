@@ -214,8 +214,8 @@ export const projects: Project[] = [
       'Led the League of Legends Grand Finals broadcast with talent, student staff and tournament operations.',
     accent: 'tan',
     cover: {
-      src: img('clol-grand-finals.jpg'),
-      alt: 'Grand Finals caster cam layout with two commentators',
+      src: img('lis-group.jpg'),
+      alt: 'League Impact Series players and community members gathered at the LAN venue',
     },
     sections: [
       {
@@ -266,8 +266,8 @@ export const projects: Project[] = [
     accent: 'steel',
     logo: img('logos/college-lol.png'),
     cover: {
-      src: img('clol-overlay.jpg'),
-      alt: 'College League of Legends broadcast overlay with player cams',
+      src: img('logos/college-lol.png'),
+      alt: 'College League of Legends logo',
     },
     sections: [
       {
