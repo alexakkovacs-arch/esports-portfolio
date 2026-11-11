@@ -197,7 +197,7 @@ export const projects: Project[] = [
         heading: 'Socials Director',
         body: 'Helped launch Division ONE’s inaugural season by creating content, supporting campaigns, and growing its social media presence.',
         photos: [
-          { src: img('d1-promoted-toasty.jpg'), alt: '"Promoted" graphic for Toasty' },
+          { src: img('na-rise-format-explainer.webp'), alt: '"Promoted" graphic for Toasty' },
           { src: img('d1-promoted-glyph.jpg'), alt: '"Promoted" graphic for Valorant player Glyph' },
           { src: img('d1-promoted-cryogen.jpg'), alt: '"Promoted" graphic for Cryogen' },
         ],
@@ -222,7 +222,7 @@ export const projects: Project[] = [
         heading: 'Grand Finals Broadcast',
         body: 'Led the League of Legends Grand Finals broadcast, collaborating with Talent, Student Staff and Tournament Operations.',
         photos: [
-          { src: img('lis-group.jpg'), alt: 'Grand Finals caster cam layout' },
+          { src: img('lis-community-group.webp'), alt: 'Grand Finals caster cam layout' },
           { src: img('na-player-highlight.jpg'), alt: 'Player highlight broadcast graphic for Wilson' },
           { src: img('na-post-game-stats.jpg'), alt: 'Post-game stats broadcast graphic' },
           { src: img('lis-group.jpg'), alt: 'Event attendees group photo at a LAN venue' },
@@ -249,7 +249,7 @@ export const projects: Project[] = [
         heading: 'Canadian Intercollegiate Exhibition',
         body: 'Live event and production work for the Canadian Intercollegiate Exhibition.',
         photos: [
-          { src: img('cie-stage.jpg'), alt: 'Presenters on stage at the exhibition' },
+          { src: img('cie-2026-cover.webp'), alt: 'Presenters on stage at the exhibition' },
           { src: img('group-blue-stage.jpg'), alt: 'Competitors and staff group photo on a blue-lit stage' },
         ],
       },
@@ -278,7 +278,7 @@ export const projects: Project[] = [
           'Worked within a double-elimination, Bo5 competitive format environment',
         ],
         photos: [
-          { src: img('logos/college-lol.png'), alt: 'Championship broadcast overlay' },
+          { src: img('clol-logo-white.png'), alt: 'Championship broadcast overlay' },
           { src: img('clol-thank-you.jpg'), alt: 'College League of Legends "Thank you" end screen' },
           { src: img('alexa-broadcast-desk.jpg'), alt: 'Alexa on the broadcast desk during NACL playoffs' },
           { src: img('na-varsity-cam.jpg'), alt: 'Player cam during a varsity broadcast' },
