@@ -222,7 +222,7 @@ export const projects: Project[] = [
         heading: 'Grand Finals Broadcast',
         body: 'Led the League of Legends Grand Finals broadcast, collaborating with Talent, Student Staff and Tournament Operations.',
         photos: [
-          { src: img('clol-grand-finals.jpg'), alt: 'Grand Finals caster cam layout' },
+          { src: img('lis-group.jpg'), alt: 'Grand Finals caster cam layout' },
           { src: img('na-player-highlight.jpg'), alt: 'Player highlight broadcast graphic for Wilson' },
           { src: img('na-post-game-stats.jpg'), alt: 'Post-game stats broadcast graphic' },
           { src: img('lis-group.jpg'), alt: 'Event attendees group photo at a LAN venue' },
@@ -278,7 +278,7 @@ export const projects: Project[] = [
           'Worked within a double-elimination, Bo5 competitive format environment',
         ],
         photos: [
-          { src: img('clol-overlay.jpg'), alt: 'Championship broadcast overlay' },
+          { src: img('logos/college-lol.png'), alt: 'Championship broadcast overlay' },
           { src: img('clol-thank-you.jpg'), alt: 'College League of Legends "Thank you" end screen' },
           { src: img('alexa-broadcast-desk.jpg'), alt: 'Alexa on the broadcast desk during NACL playoffs' },
           { src: img('na-varsity-cam.jpg'), alt: 'Player cam during a varsity broadcast' },
