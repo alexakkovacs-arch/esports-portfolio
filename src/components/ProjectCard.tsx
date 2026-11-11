@@ -24,7 +24,7 @@ export function ProjectCard({
           alt={project.cover.alt}
           width={520}
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-          className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`size-full transition-transform duration-500 group-hover:scale-105 ${project.slug === 'clol-championships' ? 'object-contain p-6' : 'object-cover'}`}
         />
         <span className="absolute left-3 top-3 border-2 border-ink bg-cream px-2 py-1 font-mono text-[11px] font-bold">
           {String(index + 1).padStart(2, '0')}
