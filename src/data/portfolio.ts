@@ -181,8 +181,8 @@ export const projects: Project[] = [
     accent: 'fuchsia',
     logo: img('logos/division-one.png'),
     cover: {
-      src: img('d1-promoted-toasty.jpg'),
-      alt: 'Division ONE "Promoted" graphic for League of Legends player Toasty',
+      src: img('na-rise-format-explainer.webp'),
+      alt: 'esclub.gg NA Rise and NA Premier tournament format explainer graphic',
     },
     sections: [
       {
@@ -214,8 +214,8 @@ export const projects: Project[] = [
       'Led the League of Legends Grand Finals broadcast with talent, student staff and tournament operations.',
     accent: 'tan',
     cover: {
-      src: img('lis-group.jpg'),
-      alt: 'League Impact Series players and community members gathered at the LAN venue',
+      src: img('lis-community-group.webp'),
+      alt: 'League Impact Series community, players, staff, and attendees gathered at the in-person finals',
     },
     sections: [
       {
@@ -241,8 +241,8 @@ export const projects: Project[] = [
     accent: 'fuchsia',
     logo: img('logos/cie.png'),
     cover: {
-      src: img('cie-stage.jpg'),
-      alt: 'Presenters on a pink-lit stage in front of an audience',
+      src: img('cie-2026-cover.webp'),
+      alt: 'Canadian Intercollegiate Exhibition 2026 promotional poster featuring competitive game characters',
     },
     sections: [
       {
@@ -266,8 +266,8 @@ export const projects: Project[] = [
     accent: 'steel',
     logo: img('logos/college-lol.png'),
     cover: {
-      src: img('logos/college-lol.png'),
-      alt: 'College League of Legends logo',
+      src: img('clol-logo-white.png'),
+      alt: 'White College League of Legends official wordmark',
     },
     sections: [
       {
