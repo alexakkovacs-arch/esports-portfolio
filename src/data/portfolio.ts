@@ -41,34 +41,34 @@ const img = (name: string) => `/img/${name}`
 
 export const skills: { label: string; blurb: string; accent: Accent }[] = [
   {
-    label: 'Graphic Design',
-    blurb: 'Gameday posters, roster drops, promotion graphics and broadcast GFX.',
-    accent: 'fuchsia',
+    label: 'Community Management',
+    blurb: 'Creating meaningful connections through community events, experiences, and activations that bring players and fans together.',
+    accent: 'gold',
   },
   {
-    label: 'Social Media Management',
-    blurb: 'Content strategy, scheduling and community across every platform.',
+    label: 'Marketing & Social Media',
+    blurb: 'Campaign strategy, platform management, and content planning that grow reach, engagement, and community interest.',
     accent: 'gold',
   },
   {
     label: 'Live Production',
-    blurb: 'Technical direction, producing, observing and live broadcasts.',
+    blurb: 'Technical direction, producing, observing, and broadcast support for polished live esports coverage.',
     accent: 'steel',
   },
   {
-    label: 'Content',
-    blurb: 'Short-form video and player stories that show what a program is like.',
-    accent: 'tan',
-  },
-  {
-    label: 'Events',
-    blurb: 'From 600-person festivals to LAN finals: planning, vendors, run-of-show.',
+    label: 'Events & Activations',
+    blurb: 'Planning and executing live events and community experiences that connect players and fans.',
     accent: 'fuchsia',
   },
   {
-    label: 'Community Management',
-    blurb: 'Discord servers, player comms and the fans who keep showing up.',
-    accent: 'gold',
+    label: 'Graphic Design',
+    blurb: 'Gameday posts, promotional graphics, event branding, and broadcast visuals tailored to esports audiences.',
+    accent: 'fuchsia',
+  },
+  {
+    label: 'Content',
+    blurb: 'Short-form video, storytelling, and player-focused content that captures the energy of each community.',
+    accent: 'tan',
   },
 ]
 
