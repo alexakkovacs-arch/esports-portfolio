@@ -237,7 +237,7 @@ function Featured() {
             </figure>
           )}
           {project.logo && (
-            <div className="absolute bottom-[31%] left-[24%] z-20 -rotate-6 border-[3px] border-ink bg-cream px-4 py-3 shadow-[5px_5px_0_0_var(--fuchsia)]">
+            <div className="absolute -top-5 left-[17%] z-20 -rotate-6 border-[3px] border-ink bg-cream px-4 py-3 shadow-[5px_5px_0_0_var(--fuchsia)]">
               <Img src={project.logo} alt="Sakura Anime Fest logo" width={220} className="w-44" />
             </div>
           )}
