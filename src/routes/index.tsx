@@ -84,7 +84,7 @@ function Hero() {
               the gameday poster to the grand finals stream.
             </p>
             <p className="display text-4xl sm:text-5xl">
-              Design. <span className="text-fuchsia-hot">Events.</span> Production.
+              Community. <span className="text-fuchsia-hot">Marketing.</span> Production.
             </p>
           </div>
 
