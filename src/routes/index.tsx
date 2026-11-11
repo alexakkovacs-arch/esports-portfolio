@@ -116,8 +116,8 @@ function Hero() {
               className="aspect-[4/5] w-full object-cover object-[40%_top]"
             />
             <figcaption className="mt-3 flex items-center justify-between font-mono text-xs uppercase tracking-widest">
-              <span>On the mic</span>
-              <span>★ Winner</span>
+              <span>Student Leadership Award</span>
+              <span>NACE 2026</span>
             </figcaption>
           </figure>
 
@@ -237,7 +237,7 @@ function Featured() {
             </figure>
           )}
           {project.logo && (
-            <div className="absolute bottom-16 left-2 -rotate-6 border-[3px] border-ink bg-cream px-4 py-3 shadow-[5px_5px_0_0_var(--fuchsia)]">
+            <div className="absolute bottom-[31%] left-[24%] z-20 -rotate-6 border-[3px] border-ink bg-cream px-4 py-3 shadow-[5px_5px_0_0_var(--fuchsia)]">
               <Img src={project.logo} alt="Sakura Anime Fest logo" width={220} className="w-44" />
             </div>
           )}
@@ -253,8 +253,9 @@ function Work() {
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow="Selected work" title="Projects" />
         <p className="mt-6 max-w-2xl text-lg">
-          Varsity programs, leagues, broadcasts and live events. Open any project
-          to see the graphics, video and production behind it.
+          From building gaming communities to organizing live events and creating
+          engaging content, explore the projects and experiences that bring
+          players, fans, and communities together.
         </p>
         <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
