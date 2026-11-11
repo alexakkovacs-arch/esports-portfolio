@@ -31,9 +31,9 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Build portfolio
         env:
-          # Allows the initial GitHub URL to work before lexkk.com DNS changes.
-          # When connecting lexkk.com, change this value to /.
-          GITHUB_PAGES_BASE_PATH: /esports-portfolio/
+          # Custom domain lexkk.com is served from the site root.
+          # Use root-relative URLs for scripts, styles, images, and routes.
+          GITHUB_PAGES_BASE_PATH: /
         run: pnpm build
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
