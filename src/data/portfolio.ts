@@ -126,7 +126,7 @@ export const projects: Project[] = [
             year: '2024–2026',
             role: 'Branding · Tournament Operations · Broadcast',
             description: 'Led branding and promotional content for the series while supporting tournament operations and broadcasts, including graphics, livestream coverage and student community events.',
-            photo: { src: img('sgs-group.jpg'), alt: 'Saints Gauntlet Series competitors and event staff posing together' },
+            photo: { src: img('saints-group.jpg'), alt: 'St. Clair Saints players and staff together on a blue-lit esports stage' },
           },
           {
             title: 'Student Events',
