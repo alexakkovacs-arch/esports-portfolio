@@ -4,8 +4,6 @@ export const site = {
   role: 'Esports events, production & marketing',
   location: 'Windsor, Ontario',
   email: 'alexakkovacs@gmail.com',
-  phone: '(519) 564-1919',
-  phoneHref: 'tel:+15195641919',
   description:
     'Portfolio of Alexa Kovacevich, a freelance creative in Windsor, Ontario working on esports events, live broadcast production, branding and social media.',
   social: {

@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { Mail, Phone, Send } from 'lucide-react'
+import { Mail, Send } from 'lucide-react'
 import { site } from '../lib/site'
 import { assetUrl } from '../lib/assets'
 
@@ -48,11 +48,6 @@ export function ContactForm() {
             <li>
               <a href={`mailto:${site.email}`} className="brutal-sm inline-flex items-center gap-3 bg-fuchsia px-4 py-3 font-bold hover:-translate-y-0.5">
                 <Mail size={16} aria-hidden="true" /> {site.email}
-              </a>
-            </li>
-            <li>
-              <a href={site.phoneHref} className="brutal-sm inline-flex items-center gap-3 px-4 py-3 font-bold hover:-translate-y-0.5">
-                <Phone size={16} aria-hidden="true" /> {site.phone}
               </a>
             </li>
             <li className="flex gap-4 pt-2">

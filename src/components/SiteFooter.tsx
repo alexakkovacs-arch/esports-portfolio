@@ -17,9 +17,6 @@ export function SiteFooter() {
           <a className="hover:text-fuchsia" href={`mailto:${site.email}`}>
             {site.email}
           </a>
-          <a className="hover:text-fuchsia" href={site.phoneHref}>
-            {site.phone}
-          </a>
           <p className="text-cream/60">{site.location}</p>
           <div className="mt-2 flex flex-wrap gap-3">
             <a className="underline decoration-fuchsia decoration-2 underline-offset-4 hover:text-fuchsia" href={site.social.linkedin} target="_blank" rel="noreferrer">

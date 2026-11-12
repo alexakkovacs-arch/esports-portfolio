@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowDown, ArrowRight, Mail, MapPin, Phone, Trophy } from 'lucide-react'
+import { ArrowDown, ArrowRight, Mail, MapPin, Trophy } from 'lucide-react'
 import { site, pageMeta } from '../lib/site'
 import {
   accentBg,
@@ -386,9 +386,6 @@ function ContactCta() {
         <div className="mt-10 flex flex-wrap gap-4">
           <a href={`mailto:${site.email}`} className="btn btn-pink">
             <Mail size={16} aria-hidden="true" /> {site.email}
-          </a>
-          <a href={site.phoneHref} className="btn bg-white">
-            <Phone size={16} aria-hidden="true" /> {site.phone}
           </a>
           <Link to="/contact" className="btn btn-ink">
             Send a message <ArrowRight size={16} aria-hidden="true" />
