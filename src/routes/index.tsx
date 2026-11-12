@@ -18,7 +18,7 @@ import { ProjectCard } from '../components/ProjectCard'
 
 export const Route = createFileRoute('/')({
   component: Home,
-  head: () => pageMeta('Esports events, production & marketing', site.description),
+  head: () => pageMeta('Esports events, production & marketing', site.description, 'lexkk'),
 })
 
 function Home() {
