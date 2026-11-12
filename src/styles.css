@@ -23,6 +23,7 @@
   --mint: #a6dbc1;
   --lilac: #c8afe7;
   --lis-pink: #e94b85;
+  --cie-red: #eb1735;
 
   --background: var(--cream);
   --foreground: var(--ink);
@@ -66,6 +67,7 @@
   --color-mint: var(--mint);
   --color-lilac: var(--lilac);
   --color-lis: var(--lis-pink);
+  --color-cie: var(--cie-red);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -214,6 +216,10 @@
   .saints-page .saints-burst {
     filter: hue-rotate(82deg) saturate(0.85);
   }
+  .cie-page .tape::before {
+    background: rgb(255 243 239 / 0.75);
+  }
+
   .tape::before {
     content: '';
     position: absolute;

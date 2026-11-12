@@ -29,9 +29,10 @@ function ProjectPage() {
   const isSaints = project.slug === 'st-clair-saints'
   const isEsclub = project.slug === 'na-rise-na-premier'
   const isLIS = project.slug === 'league-impact-series'
+  const isCie = project.slug === 'cie'
 
   return (
-    <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : isLIS ? 'lis-page' : undefined}>
+    <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : isLIS ? 'lis-page' : isCie ? 'cie-page' : undefined}>
       <header
         className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
@@ -39,9 +40,9 @@ function ProjectPage() {
           src={assetUrl('/img/shapes/burst-blue.svg')}
           alt=""
           aria-hidden="true"
-          className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow ${isLIS ? 'brightness-0 opacity-100' : 'opacity-70'} ${isSaints ? 'saints-burst' : ''}`}
+          className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow ${isLIS ? 'brightness-0 opacity-100' : isCie ? 'brightness-0 opacity-15' : 'opacity-70'} ${isSaints ? 'saints-burst' : ''}`}
         />
-        <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints || isLIS ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
+        <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints || isLIS ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : isCie ? 'lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.85fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
           <div>
             <Link
               to="/"
@@ -51,7 +52,7 @@ function ProjectPage() {
               <ArrowLeft size={14} aria-hidden="true" /> All projects
             </Link>
             <div className={isEsclub ? 'mt-10 flex items-center gap-4 sm:gap-5' : 'mt-10'}>
-              <p className="eyebrow">{project.org}</p>
+              <p className="eyebrow">{isCie ? "CIE 2026" : project.org}</p>
               {isEsclub && project.logo && (
                 <Img
                   src={project.logo}
@@ -69,6 +70,12 @@ function ProjectPage() {
                 <span className="block text-[clamp(4rem,8vw,8rem)]">
                   Series
                 </span>
+              </h1>
+            ) : isCie ? (
+              <h1 className="display mt-4 max-w-full text-[clamp(2.05rem,5.7vw,5rem)] leading-[1.01]">
+                <span className="block">Canadian</span>
+                <span className="block">Intercollegiate</span>
+                <span className="block">Exhibition</span>
               </h1>
             ) : (
               <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
@@ -99,15 +106,15 @@ function ProjectPage() {
               </dl>
             )}
           </div>
-          <figure className={`brutal relative mx-auto w-full rotate-2 p-3 ${isLIS ? 'mt-32 sm:mt-40' : 'tape'} ${isSaints || isLIS ? 'max-w-[640px]' : 'max-w-md'}`}>
+          <figure className={`brutal relative mx-auto w-full rotate-2 p-3 ${isLIS ? 'mt-32 sm:mt-40' : 'tape'} ${isSaints || isLIS ? 'max-w-[640px]' : isCie ? 'max-w-[400px]' : 'max-w-md'}`}>
             <Img
               src={project.cover.src}
               alt={project.cover.alt}
-              width={isSaints || isLIS ? 760 : 480}
+              width={isSaints || isLIS ? 760 : isCie ? 640 : 480}
               loading="eager"
               fetchPriority="high"
-              sizes={isSaints || isLIS ? '(min-width: 1024px) 50vw, 90vw' : '(min-width: 1024px) 420px, 90vw'}
-              className={isSaints || isLIS ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
+              sizes={isSaints || isLIS ? '(min-width: 1024px) 50vw, 90vw' : isCie ? '(min-width: 1024px) 400px, 90vw' : '(min-width: 1024px) 420px, 90vw'}
+              className={isSaints || isLIS || isCie ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
             />
             {isSaints && project.logo && (
               <Img
@@ -247,7 +254,7 @@ function ProjectPage() {
         >
           <div>
             <p className="eyebrow text-fuchsia">Next project</p>
-            <p className="display mt-2 text-5xl transition-colors group-hover:text-fuchsia sm:text-7xl">
+            <p className={`display mt-2 transition-colors group-hover:text-fuchsia ${next.slug === "cie" ? "text-3xl sm:text-5xl" : "text-5xl sm:text-7xl"}`}>
               {next.title}
             </p>
           </div>

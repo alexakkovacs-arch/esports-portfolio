@@ -48,7 +48,7 @@ export function ProjectCard({
       </div>
       <div className="flex items-start justify-between gap-3 p-5">
         <div>
-          <h3 className="display text-3xl">{project.title}</h3>
+          <h3 className={`display ${project.slug === "cie" ? "text-2xl leading-[1] sm:text-3xl" : "text-3xl"}`}>{project.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-ink/70">
             {project.summary}
           </p>

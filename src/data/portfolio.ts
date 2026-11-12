@@ -3,7 +3,7 @@
  * awards, partners and skills. Images are paths under /public.
  */
 
-export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise' | 'lis' | 'mint' | 'lilac'
+export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise' | 'lis' | 'mint' | 'lilac' | 'cie'
 
 export type Photo = { src: string; alt: string }
 
@@ -299,13 +299,13 @@ export const projects: Project[] = [
   },
   {
     slug: 'cie',
-    title: 'CIE',
+    title: 'Canadian Intercollegiate Exhibition',
     org: 'Canadian Intercollegiate Exhibition',
     roles: ['Social Director', 'Broadcast Producer', 'Technical Director'],
     tags: ['Social Media Strategy', 'Bilingual Marketing', 'Community Engagement', 'Live Event Coverage', 'Broadcast Production'],
     summary:
       'Led bilingual English and French social media strategy, event coverage and sponsor communications for CIE 2026, while producing and technical directing collegiate esports broadcasts.',
-    accent: 'fuchsia',
+    accent: 'cie',
     logo: img('logos/cie.png'),
     cover: {
       src: img('cie-2026-cover.webp'),
@@ -541,6 +541,7 @@ export const accentBg: Record<Accent, string> = {
   steel: 'bg-steel',
   tan: 'bg-tan',
   lis: 'bg-lis',
+  cie: 'bg-cie',
   mint: 'bg-mint',
   lilac: 'bg-lilac',
   ink: 'bg-ink',
