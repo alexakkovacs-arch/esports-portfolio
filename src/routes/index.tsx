@@ -233,6 +233,24 @@ function Featured() {
             </div>
           )}
         </div>
+        {photos.length > 2 && (
+          <div className="lg:col-span-2">
+            <p className="eyebrow mb-5 text-fuchsia">Behind Sakura Anime Fest</p>
+            <ul className="grid gap-5 sm:grid-cols-2">
+              {photos.slice(2).map((photo, i) => (
+                <li key={photo.src} className={`border-[3px] border-cream bg-cream p-2 ${i % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
+                  <Img
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={760}
+                    sizes="(min-width: 1024px) 45vw, 90vw"
+                    className="aspect-[16/9] w-full object-cover"
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   )
@@ -287,10 +305,10 @@ function Awards() {
           </ul>
           <figure className="brutal mt-10 hidden max-w-sm -rotate-2 p-3 lg:block">
             <Img
-              src={assetUrl('/img/alexa-podium.jpg')}
-              alt="Alexa speaking at a podium during an awards ceremony"
+              src={assetUrl('/img/scc-directors-award.webp')}
+              alt="Receiving the St. Clair College Director’s Award in 2026"
               width={420}
-              className="aspect-[4/3] w-full object-cover"
+              className="h-auto w-full object-contain"
             />
           </figure>
         </div>

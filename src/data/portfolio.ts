@@ -136,6 +136,19 @@ export const projects: Project[] = [
             photo: { src: img('saints-tft-group.jpg'), alt: 'Students gathered together at a St. Clair College Teamfight Tactics tournament' },
           },
         ],
+        photos: [
+          { src: img('scc-camp-session.webp'), alt: 'Leading a content creation activity with students during a St. Clair esports camp' },
+          { src: img('scc-tft-organizing.webp'), alt: 'Organizing and supporting participants during a St. Clair Teamfight Tactics tournament' },
+          { src: img('scc-lan-of-the-dead.webp'), alt: 'LAN of the Dead student event staff gathered together at St. Clair College' },
+        ],
+      },
+      {
+        heading: 'Leadership & Recognition',
+        role: 'Director’s Award · 2026',
+        body: 'Alongside my work on campus events, student programming and broadcasts, I received the Director’s Award in 2026 at St. Clair College.',
+        photos: [
+          { src: img('scc-directors-award.webp'), alt: 'Receiving the St. Clair College Director’s Award at the 2026 banquet' },
+        ],
       },
       {
         heading: 'Creative Direction',
@@ -250,6 +263,14 @@ export const projects: Project[] = [
       src: img('lis-community-group.webp'),
       alt: 'League Impact Series players, staff and community members together at the in-person Grand Finals',
     },
+    gallery: [
+      { src: img('lis-community-interview.webp'), alt: 'League Impact Series community interview during the LAN finals' },
+      { src: img('lis-community-hug.webp'), alt: 'Players and community members sharing an emotional moment at League Impact Series' },
+      { src: img('lis-trophies.webp'), alt: 'League Impact Series 2026 championship trophies on display at the finals' },
+      { src: img('lis-grand-finals-viewing.webp'), alt: 'Attendees watching League Impact Series Grand Finals live at the esports venue' },
+      { src: img('lis-group.jpg'), alt: 'League Impact Series participants and staff gathered at the LAN venue' },
+      { src: img('lis-community-group.webp'), alt: 'Players, staff and attendees together at the League Impact Series Grand Finals' },
+    ],
     sections: [
       {
         heading: 'Building a Community',
@@ -279,10 +300,6 @@ export const projects: Project[] = [
           'Helped coordinate the venue, event setup, staffing schedules and production readiness.',
           'Supported tournament administration, on-site operations and the live event experience.',
           'Served as Technical Director for the Grand Finals LAN broadcast, overseeing the live technical execution.',
-        ],
-        photos: [
-          { src: img('lis-group.jpg'), alt: 'League Impact Series participants and staff gathered at the LAN venue' },
-          { src: img('lis-community-group.webp'), alt: 'Players, staff and attendees together at the League Impact Series Grand Finals' },
         ],
       },
       {
@@ -482,9 +499,10 @@ export const featuredEvent: Project =   {
           'Coordinated staff and event-day execution',
         ],
         photos: [
-          { src: img('sakura-crowd.jpg'), alt: 'Attendees in the vendor hall' },
-          { src: img('sakura-friends.jpg'), alt: 'Alexa and a friend holding a Sakura Anime Fest trophy' },
-          { src: img('lan-of-the-dead.jpg'), alt: '"LAN of the Dead" event group photo under red lights' },
+          { src: img('sakura-community-mixer.webp'), alt: 'Sakura Anime Fest attendees gathering and connecting in the event hall' },
+          { src: img('sakura-cosplay-crowd.webp'), alt: 'Cosplayers enjoying Sakura Anime Fest in the gaming lounge' },
+          { src: img('sakura-staff-team.webp'), alt: 'Sakura Anime Fest 2026 event staff and volunteer team posing together' },
+          { src: img('sakura-cosplay-activities.webp'), alt: 'Cosplayers and attendees taking part in activities at Sakura Anime Fest 2026' },
         ],
       },
     ],

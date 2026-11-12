@@ -227,7 +227,7 @@ function ProjectPage() {
           </section>
         ))}
         {project.gallery && project.gallery.length > 0 && (
-          <ul aria-label="CIE project gallery" className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul aria-label={`${project.title} project gallery`} className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {project.gallery.map((photo) => (
               <li
                 key={photo.src}
@@ -238,7 +238,7 @@ function ProjectPage() {
                   alt={photo.alt}
                   width={480}
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                  className="h-full w-full object-contain"
+                  className={isLIS ? 'h-full w-full object-cover' : 'h-full w-full object-contain'}
                 />
               </li>
             ))}
