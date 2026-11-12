@@ -35,7 +35,7 @@ function ProjectPage() {
   return (
     <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : isLIS ? 'lis-page' : isCie ? 'cie-page' : undefined}>
       <header
-        className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
+        className={`relative overflow-hidden border-b-[3px] border-ink ${isClol ? 'bg-[#f4d1d1]' : accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
         <img
           src={assetUrl('/img/shapes/burst-blue.svg')}
