@@ -301,9 +301,9 @@ export const projects: Project[] = [
     title: 'CIE',
     org: 'Canadian Intercollegiate Exhibition',
     roles: ['Social Director', 'Broadcast Producer', 'Technical Director'],
-    tags: ['Social Media Strategy', 'Event Coverage', 'Broadcast Production', 'Sponsor Activations'],
+    tags: ['Social Media Strategy', 'Bilingual Marketing', 'Community Engagement', 'Live Event Coverage', 'Broadcast Production'],
     summary:
-      'Led social media direction, event coverage and sponsor content for CIE 2026 while producing and technical directing collegiate esports broadcasts.',
+      'Led bilingual English and French social media strategy, event coverage and sponsor communications for CIE 2026, while producing and technical directing collegiate esports broadcasts.',
     accent: 'fuchsia',
     logo: img('logos/cie.png'),
     cover: {
@@ -314,41 +314,67 @@ export const projects: Project[] = [
       {
         heading: 'Social Direction & Marketing',
         role: 'Social Director · May 2026',
-        body: 'As Social Director for the 2026 Canadian Intercollegiate Exhibition, I managed social media direction, scheduling and live coverage for a multi-title collegiate esports event. I coordinated with event organizers, creatives and broadcast teams to keep announcements, programming and sponsor messaging consistent throughout the event.',
+        body: 'As Social Director for CIE 2026, I oversaw the event’s social media strategy, content planning and live coverage for a national collegiate esports exhibition. I worked with organizers, creatives and broadcast staff to coordinate tournament promotion, announcements, event programming and sponsor messaging across platforms.',
         bullets: [
-          'Planned and scheduled social content, from pre-event promotion to daily updates and results.',
-          'Coordinated social deliverables and event coverage across staff and production teams.',
-          'Created and directed announcements, schedules, graphics and sponsor-related posts for collegiate audiences.',
+          'Planned and scheduled campaigns from pre-event registration promotion through live event updates and results.',
+          'Coordinated social deliverables with tournament, creative and broadcast teams.',
+          'Directed promotional graphics, announcements, schedules and sponsor-related content for collegiate esports audiences.',
         ],
       },
       {
-        heading: 'Live Event Coverage',
-        role: 'Community Communications · Multi-Game Coverage',
-        body: 'I kept viewers and participants informed throughout CIE through timely schedules, results, live updates and streaming information. Coverage spanned League of Legends, VALORANT, Overwatch and Rocket League, alongside educational and community programming such as casting, esports careers and financial literacy sessions.',
+        heading: 'Bilingual Social Strategy',
+        role: 'English & French · Inclusive Community Marketing',
+        body: 'I implemented a bilingual-friendly social media strategy that featured content in both English and French to celebrate Canada’s bilingual identity. By sharing tournament announcements, promotional graphics and event updates in both languages, I worked to make CIE’s communications more welcoming and accessible to French-speaking and English-speaking esports communities across Canada.',
         bullets: [
-          'Delivered game-day schedules, live-now updates, match results and stream announcements.',
-          'Promoted competitions and panels so students and fans could discover what was happening across the event.',
-          'Helped connect the event experience across social channels, tournaments and broadcasts.',
+          'Incorporated both English- and French-language posts into the event’s social media communications.',
+          'Created and shared French-language tournament information alongside English-language promotion.',
+          'Used inclusive messaging to recognize Canada’s bilingual communities and encourage participation.',
+        ],
+        photos: [
+          {
+            src: img('cie-registration-french.webp'),
+            alt: 'French-language CIE League of Legends promotion announcing that registration closes in seven days',
+          },
+        ],
+      },
+      {
+        heading: 'Live Event Coverage & Community',
+        role: 'Multi-Game Coverage · Industry Night · Volunteer Recognition',
+        body: 'I helped audiences follow CIE across League of Legends, VALORANT, Overwatch and Rocket League with schedules, results, streaming information and live updates. Beyond competition, I also participated in the Industry Night student leaders panel and highlighted the volunteers who helped bring the exhibition to life.',
+        bullets: [
+          'Shared game-day schedules, live-now announcements, match results and event highlights.',
+          'Supported promotion of Industry Night programming and spoke on the Trail-Blazers student leadership panel.',
+          'Recognized the organizers, volunteers and community members behind the event.',
+        ],
+        photos: [
+          {
+            src: img('cie-industry-night.webp'),
+            alt: 'CIE Industry Night Trail-Blazers Student Leaders in Esports panel announcement',
+          },
+          {
+            src: img('cie-volunteers.webp'),
+            alt: 'CIE 2026 Thank You Volunteers graphic featuring event staff and volunteer contributors',
+          },
         ],
       },
       {
         heading: 'Broadcast Production',
         role: 'Broadcast Producer · Technical Director',
-        body: 'Alongside my marketing responsibilities, I worked as a Broadcast Producer and Technical Director for CIE 2026, including directing League of Legends streams. My production work supported broadcast operations and live esports coverage across the event’s competitive titles.',
+        body: 'Alongside social media and community engagement, I served as a Broadcast Producer and Technical Director for CIE 2026, including directing League of Legends broadcasts. I collaborated with production teams and event organizers to support live show execution and the viewing experience across multiple competitive titles.',
         bullets: [
-          'Directed live League of Legends broadcasts and handled technical switching and show execution.',
-          'Collaborated with broadcast crew and event organizers on production schedules and live coverage.',
-          'Supported a consistent viewing experience across a multi-game collegiate event.',
+          'Produced and technical directed live esports broadcasts, including League of Legends coverage.',
+          'Coordinated with the broadcast crew and event staff on show flow and production schedules.',
+          'Supported broadcast operations across a multi-game collegiate esports exhibition.',
         ],
       },
       {
         heading: 'Sponsors & Activations',
         role: 'Partner Communications · BMO Title Sponsor',
-        body: 'Sponsor visibility was part of the event experience. I supported social and promotional deliverables featuring BMO, CIE 2026’s title sponsor, and communicated partner programming and giveaways to make those activations visible and accessible to viewers.',
+        body: 'Sponsor visibility was part of CIE’s event experience. I supported promotional deliverables featuring BMO, the event’s title sponsor, and helped communicate programming and partner activations to audiences following the exhibition.',
         bullets: [
-          'Supported title-sponsor visibility and promotion of BMO Financial Literacy programming.',
-          'Promoted partner activity, including a ONEofZERO giveaway of six premium gaming mice during event streams.',
-          'Worked sponsor-related content into the broader event communication and posting schedule.',
+          'Supported title-sponsor visibility and promotion of BMO financial literacy programming.',
+          'Promoted partner activities, including a ONEofZERO gaming mouse giveaway during CIE streams.',
+          'Integrated sponsor-related announcements into the broader event social media schedule.',
         ],
       },
     ],
