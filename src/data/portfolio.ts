@@ -499,6 +499,8 @@ export const featuredEvent: Project =   {
           'Coordinated staff and event-day execution',
         ],
         photos: [
+          { src: img('sakura-crowd.jpg'), alt: 'Attendees in the Sakura Anime Fest vendor hall' },
+          { src: img('sakura-friends.jpg'), alt: 'Alexa and a friend holding Sakura Anime Fest keepsakes' },
           { src: img('sakura-community-mixer.webp'), alt: 'Sakura Anime Fest attendees gathering and connecting in the event hall' },
           { src: img('sakura-cosplay-crowd.webp'), alt: 'Cosplayers enjoying Sakura Anime Fest in the gaming lounge' },
           { src: img('sakura-staff-team.webp'), alt: 'Sakura Anime Fest 2026 event staff and volunteer team posing together' },
