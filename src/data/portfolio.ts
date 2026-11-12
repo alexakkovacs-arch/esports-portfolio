@@ -124,7 +124,7 @@ export const projects: Project[] = [
             title: 'Saints Gauntlet Series',
             year: '2024–2026',
             role: 'Branding · Tournament Operations · Broadcast',
-            description: 'Developed the series identity and supported recurring competitive events through community promotion, event administration and production.',
+            description: 'Led branding and promotional content for the series while supporting tournament operations and broadcasts, including graphics, livestream coverage and student community events.',
             photo: { src: img('sgs-group.jpg'), alt: 'Saints Gauntlet Series competitors and event staff posing together' },
           },
           {
@@ -146,6 +146,9 @@ export const projects: Project[] = [
           { src: img('saints-cwadz-gameday.jpg'), alt: 'Call of Duty Varsity Premier gameday poster featuring CWADZ' },
           { src: img('saints-welcome-woody.jpg'), alt: 'Valorant Varsity Premier "Welcome Woody" player announcement' },
           { src: img('saints-super-conference.jpg'), alt: 'NACE Super Conference League of Legends schedule poster' },
+          { src: img('sgs-poster.jpg'), alt: 'Saints Gauntlet Series event branding poster' },
+          { src: img('sgs-live-now.jpg'), alt: 'Saints Gauntlet Series live broadcast announcement' },
+          { src: img('saints-champions.jpg'), alt: 'Saints Gauntlet Series Call of Duty champions graphic' },
         ],
       },
       {
@@ -174,44 +177,7 @@ export const projects: Project[] = [
           { src: img('saints-playoffs.jpg'), alt: 'Playoffs stage lit in blue with players at their stations' },
           { src: img('saints-recap.jpg'), alt: 'Season recap collage of Saints social graphics' },
           { src: img('saints-group-green.jpg'), alt: 'Event staff and players group photo under green lights' },
-        ],
-      },
-    ],
-  },
-  {
-    slug: 'saints-gauntlet-series',
-    title: 'Saints Gauntlet Series',
-    org: 'St. Clair Saints',
-    roles: ['Branding Lead', 'Socials', 'TO', 'Broadcast'],
-    tags: ['Branding', 'Socials', 'Tournament Ops', 'Broadcast'],
-    summary:
-      'Built the identity for the Saints Gauntlet Series and worked on broadcast and tournament operations across its events.',
-    accent: 'steel',
-    logo: img('logos/sgs.png'),
-    cover: {
-      src: img('sgs-poster.jpg'),
-      alt: '"Who will rule the Gauntlet?" Saints Gauntlet Series event poster',
-    },
-    sections: [
-      {
-        heading: 'Branding and Socials',
-        role: 'Branding Lead, Socials',
-        body: 'Directed branding and social media, building a cohesive identity for Saints Gauntlet Series.',
-        photos: [
-          { src: img('sgs-poster.jpg'), alt: '"Who will rule the Gauntlet?" event poster' },
-          { src: img('sgs-live-now.jpg'), alt: '"Live Now" Saints Gauntlet Series stream graphic' },
-          { src: img('saints-champions.jpg'), alt: 'Saints Gauntlet Series Call of Duty champions graphic' },
-          { src: img('saints-tft.jpg'), alt: 'Saints Teamfight Tactics tournament stream graphic' },
-        ],
-      },
-      {
-        heading: 'TO and Broadcast',
-        role: 'Tournament Ops, Broadcast',
-        body: 'Worked on broadcast observing and supported tournament operations across SGS events.',
-        photos: [
-          { src: img('sgs-stream.jpg'), alt: 'Saints Gauntlet Series stream layout with team photo' },
-          { src: img('sgs-group.jpg'), alt: 'Gauntlet Series competitors and staff on stage' },
-          { src: img('saints-tft-group.jpg'), alt: 'Players posing at the Teamfight Tactics tournament' },
+          { src: img('sgs-stream.jpg'), alt: 'Saints Gauntlet Series stream production layout' },
         ],
       },
     ],
