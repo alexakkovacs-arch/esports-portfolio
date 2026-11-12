@@ -170,8 +170,9 @@ export const projects: Project[] = [
       },
       {
         heading: 'The Journey: Jazzyk1ns',
-        body: 'Showcasing Jazzyk1ns’ growth through gameplay, community moments, and milestones, this video tells a compelling story of skill, struggle and passion.',
-        videos: [{ id: 'TTIxacKXDOE', title: 'The Journey: Jazzyk1ns' }],
+        role: 'Featured Creative Project · Player Storytelling',
+        body: 'This project was a creative first for me. I had never made a story-driven esports video quite like this before, so I challenged myself to explore new skills and techniques to bring Jazzyk1ns’ journey to life. Instead of focusing only on gameplay highlights, I wanted to tell a more personal story about the player, their growth and the moments that shaped their journey. It was an opportunity to step outside my usual workflow, experiment creatively and grow as a storyteller.',
+        videos: [{ id: 'TTIxacKXDOE', title: 'The Journey: Jazzyk1ns — Featured Creative Piece' }],
       },
       {
         heading: 'Broadcast & Production',

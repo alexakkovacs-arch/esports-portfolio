@@ -140,13 +140,26 @@ function ProjectPage() {
 
       <div className="mx-auto max-w-7xl space-y-24 px-4 py-20 sm:px-6">
         {project.sections.map((section, si) => (
-          <section key={section.heading} aria-labelledby={`section-${si}`}>
-            <div className="grid gap-8 lg:grid-cols-[1fr_2fr]">
+          <section
+            key={section.heading}
+            aria-labelledby={`section-${si}`}
+            className={
+              isSaints && section.heading === 'The Journey: Jazzyk1ns'
+                ? 'relative border-[3px] border-ink bg-saints/10 px-5 py-9 shadow-[10px_10px_0_0_var(--saints-green)] sm:px-10 sm:py-12'
+                : undefined
+            }
+          >
+            <div className={`grid gap-8 ${isSaints && section.heading === 'The Journey: Jazzyk1ns' ? 'lg:grid-cols-[1fr_1.1fr] lg:gap-12' : 'lg:grid-cols-[1fr_2fr]'}`}>
               <div>
                 <span className="font-mono text-sm font-bold">
                   {String(si + 1).padStart(2, '0')}/
                 </span>
-                <h2 id={`section-${si}`} className="display mt-2 text-5xl sm:text-6xl">
+                {isSaints && section.heading === 'The Journey: Jazzyk1ns' && (
+                  <span className="ml-4 inline-block -rotate-2 border-2 border-ink bg-saints px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider">
+                    ★ Creative Highlight
+                  </span>
+                )}
+                <h2 id={`section-${si}`} className={`display mt-2 ${isSaints && section.heading === 'The Journey: Jazzyk1ns' ? 'text-5xl leading-[1.08] sm:text-7xl' : 'text-5xl sm:text-6xl'}`}>
                   {section.heading}
                 </h2>
                 {section.role && (
@@ -204,6 +217,11 @@ function ProjectPage() {
               </ul>
             )}
 
+            {isSaints && section.heading === 'The Journey: Jazzyk1ns' && (
+              <p className="mt-12 border-t-2 border-ink/25 pt-6 font-mono text-xs font-bold uppercase tracking-[0.2em]">
+                Watch the featured story ↓
+              </p>
+            )}
             {section.videos && <VideoGrid videos={section.videos} />}
 
             {section.photos && section.photos.length > 0 && (
