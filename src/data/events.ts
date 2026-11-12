@@ -34,7 +34,7 @@ const raw = `
 2025|Saints Gauntlet - Super Smash Bros. Ultimate|2025|St. Clair College|Tournament / LAN|Event Organizing; Social Media; Setup / Teardown||
 2025|Saints Gauntlet - VALORANT|2025|St. Clair College|Tournament / LAN|Event Organizing; Social Media||
 2025|Saints Gauntlet - Overwatch|2025|St. Clair College|Tournament / LAN|Event Organizing; Social Media||
-2025|NACL Open Qualifiers - Team Respawned|2025|Team Respawned|Tournament|Tournament-Related Work||
+2025|NACL Open Qualifiers - Team Respawned|2025|Team Respawned|Broadcast Coverage|Technical Director||
 2025|St. Clair March Break Camp 2025|March 10–14, 2025|St. Clair College|Camp|Lead Camp Counsellor||Full week
 2025|St. Clair Major III LAN|2025|St. Clair College|LAN|Tournament Admin; Social Media; Live Content||
 2025|No Man's LAN 2025|2025|St. Clair College|LAN|Social Media||
@@ -49,7 +49,7 @@ const raw = `
 2025|St. Clair Regular Collegiate Broadcasts|Fall 2025|St. Clair College|Broadcast Series|Producer; Technical Director; Social Media||11+ match days
 2025|St. Clair Smash Class Fall Editions|Fall 2025|St. Clair College|Tournament Series|Social Media; Marketing; Live Content||3–5 editions
 2025|St. Clair League of Legends Worlds Watch Party 2025|2025|St. Clair College|Watch Party|Event Lead; Organizing; Marketing; Live Content; Staff Management; Setup / Teardown; Photo / Video||
-2025|St. Clair LAN of the Dead 2025|2025|St. Clair College|LAN|||
+2025|St. Clair LAN of the Dead 2025|2025|St. Clair College|LAN|Social Media||
 2025|Winter WonderLAN 2025|2025|St. Clair College|LAN|Social Media; Live Content||
 2025|TXP LAN Fall 2025|Fall 2025|St. Clair College|Tournament / LAN|Tournament Admin; Social Media; Setup / Teardown||
 2025|NACE Grand Finals - League of Legends|Fall 2025|NACE|Championship Broadcast|Broadcast Director||Remote broadcast
@@ -87,7 +87,7 @@ const raw = `
 2026|NA Premier|2026|esclub.gg|Tournament / Campaign|Marketing; Pre-show Content; Live Updates; Graphics||
 2026|Team Canada Overwatch World Cup|2026|Team Canada OWWC|Tournament Creative|Design Lead; Graphics||
 2026|NACL - Contingent Esports|2026|Contingent Esports|Tournament Creative|Branding; Social Media||
-2026|St. Clair LAN of the Dead 2026|2026|St. Clair College|LAN|Event Operations; Marketing; Social Media; Live Coverage|80|
+2026|St. Clair LAN of the Dead 2026|2026|St. Clair College|LAN|Social Media|80|
 `
 
 export const events: EventEntry[] = raw
