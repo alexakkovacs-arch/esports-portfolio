@@ -234,19 +234,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'Marketing & Tournament Content',
-        role: 'Campaigns · Social Media · Player Communications',
-        body: 'My work connects the competition to its community through tournament explainers, schedules, results, livestream promotion and player-focused graphics. I use information from esclub.gg and its league coverage to make each competition easier to follow while giving participants visibility beyond their matches.',
-        bullets: [
-          'Create and coordinate promotional graphics, social posts, schedules and tournament information.',
-          'Translate league results, stats and player performances into community-facing updates.',
-          'Contribute to tournament operations, competitive structure and player communication alongside the organizing team.',
-        ],
-        photos: [
-          { src: img('na-rise-format-explainer.webp'), alt: 'NA Rise tournament format explainer created for the esclub.gg community' },
-        ],
-      },
-      {
         heading: 'Putting Players First Through Stats',
         role: 'League statistics · Player recognition · Social storytelling',
         body: 'The esclub.gg website brings together competitive match results, individual performance statistics, team standings and player rankings. My role is not building the website or developing its statistics systems; I use the information they provide to create social media content that puts players in the spotlight. From Top 5 laners and weekly results to standout performances, these posts turn numbers into stories that recognize competitors and encourage the community to follow along.',
