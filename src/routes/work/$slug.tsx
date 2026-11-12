@@ -131,10 +131,10 @@ function ProjectPage() {
                     {section.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-lg">
                         <span
-                          className={`mt-0.5 shrink-0 text-2xl leading-none ${isSaints ? 'text-saints-dark' : isEsclub ? 'text-rise-dark' : 'text-fuchsia'}`}
+                          className={`mt-1 shrink-0 text-sm leading-none ${isSaints ? 'text-saints-dark' : isEsclub ? 'text-rise-dark' : 'text-fuchsia'}`}
                           aria-hidden="true"
                         >
-                          ✺
+                          ★
                         </span>
                         <span>{b}</span>
                       </li>
