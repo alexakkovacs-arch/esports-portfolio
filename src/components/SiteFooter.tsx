@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="relative overflow-hidden border-t-[3px] border-ink bg-ink text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <p className="eyebrow text-fuchsia">Design. Events. Production.</p>
+          <p className="eyebrow text-fuchsia">Events. Community. Marketing.</p>
           <p className="display mt-3 text-6xl sm:text-8xl">
             Let’s make
             <br />
