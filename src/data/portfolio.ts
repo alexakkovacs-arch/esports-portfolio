@@ -320,9 +320,6 @@ export const projects: Project[] = [
           'Coordinated social deliverables and event coverage across staff and production teams.',
           'Created and directed announcements, schedules, graphics and sponsor-related posts for collegiate audiences.',
         ],
-        photos: [
-          { src: img('cie-2026-cover.webp'), alt: 'CIE 2026 tournament promotional artwork used for event marketing' },
-        ],
       },
       {
         heading: 'Live Event Coverage',
