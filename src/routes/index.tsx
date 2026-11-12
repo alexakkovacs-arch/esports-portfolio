@@ -5,8 +5,7 @@ import {
   accentBg,
   awardBodies,
   awards,
-  featuredSlug,
-  getProject,
+  featuredEvent,
   partners,
   projects,
   skills,
@@ -172,8 +171,7 @@ function Skills() {
 }
 
 function Featured() {
-  const project = getProject(featuredSlug)
-  if (!project) return null
+  const project = featuredEvent
   const photos = project.sections[0]?.photos ?? []
   return (
     <section className="relative overflow-hidden border-y-[3px] border-ink bg-ink px-4 py-24 text-cream sm:px-6">
@@ -216,13 +214,6 @@ function Featured() {
             ))}
           </dl>
 
-          <Link
-            to="/work/$slug"
-            params={{ slug: project.slug }}
-            className="btn btn-pink mt-10"
-          >
-            Read more <ArrowRight size={16} aria-hidden="true" />
-          </Link>
         </div>
 
         <div className="relative h-[520px] sm:h-[600px]">

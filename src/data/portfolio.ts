@@ -393,7 +393,11 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
+
+]
+
+// Featured event stays on the homepage without appearing as a standalone project.
+export const featuredEvent: Project =   {
     slug: 'sakura-anime-fest',
     title: 'Sakura Anime Fest',
     org: 'Sakura Anime Fest',
@@ -428,10 +432,7 @@ export const projects: Project[] = [
         ],
       },
     ],
-  },
-]
-
-export const featuredSlug = 'sakura-anime-fest'
+  }
 
 export type Award = {
   result: 'Winner' | 'Finalist'
