@@ -261,7 +261,6 @@ export const projects: Project[] = [
       { src: img('lis-community-hug.webp'), alt: 'Players and community members sharing an emotional moment at League Impact Series' },
       { src: img('lis-trophies.webp'), alt: 'League Impact Series 2026 championship trophies on display at the finals' },
       { src: img('lis-grand-finals-viewing.webp'), alt: 'Attendees watching League Impact Series Grand Finals live at the esports venue' },
-      { src: img('lis-group.jpg'), alt: 'League Impact Series participants and staff gathered at the LAN venue' },
       { src: img('lis-community-group.webp'), alt: 'Players, staff and attendees together at the League Impact Series Grand Finals' },
     ],
     sections: [
