@@ -61,16 +61,6 @@ function ProjectPage() {
                 />
               )}
             </div>
-            {isLIS && project.logo && (
-              <div className="mt-5 inline-block w-full max-w-52 -rotate-3 border-[3px] border-ink bg-cream p-3 shadow-[5px_5px_0_0_var(--ink)] sm:max-w-64">
-                <Img
-                  src={project.logo}
-                  alt="League Impact Series logo"
-                  width={300}
-                  className="block h-auto w-full object-contain"
-                />
-              </div>
-            )}
             <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
               {project.title}
             </h1>
@@ -115,6 +105,16 @@ function ProjectPage() {
                 width={150}
                 className="absolute bottom-5 right-5 z-10 h-auto w-20 object-contain drop-shadow-lg sm:w-28 lg:w-32"
               />
+            )}
+            {isLIS && project.logo && (
+              <div className="absolute -top-7 left-5 z-20 w-[55%] max-w-64 -rotate-3 border-[3px] border-ink bg-cream p-2 shadow-[5px_5px_0_0_var(--ink)] sm:-top-8 sm:left-8 sm:p-3">
+                <Img
+                  src={project.logo}
+                  alt="League Impact Series logo"
+                  width={300}
+                  className="block h-auto w-full object-contain"
+                />
+              </div>
             )}
           </figure>
         </div>
