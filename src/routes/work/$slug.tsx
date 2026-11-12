@@ -245,22 +245,37 @@ function ProjectPage() {
           </section>
         ))}
         {project.gallery && project.gallery.length > 0 && (
-          <ul aria-label={`${project.title} project gallery`} className={`grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 ${isEsclub ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}>
-            {project.gallery.map((photo) => (
-              <li
-                key={photo.src}
-                className="brutal flex h-[320px] items-center justify-center overflow-hidden bg-white p-3 sm:h-[340px]"
-              >
-                <Img
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={480}
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                  className={isLIS ? 'h-full w-full object-cover' : 'h-full w-full object-contain'}
-                />
-              </li>
-            ))}
-          </ul>
+          <div>
+            <ul aria-label={`${project.title} project gallery`} className={`grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 ${isEsclub ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}>
+              {project.gallery.map((photo) => (
+                <li
+                  key={photo.src}
+                  className="brutal flex h-[320px] items-center justify-center overflow-hidden bg-white p-3 sm:h-[340px]"
+                >
+                  <Img
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={480}
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                    className={isLIS ? 'h-full w-full object-cover' : 'h-full w-full object-contain'}
+                  />
+                </li>
+              ))}
+            </ul>
+            {isLIS && (
+              <p className="mt-6 text-center font-mono text-xs uppercase tracking-wider text-ink/70">
+                Photos taken by{' '}
+                <a
+                  href="https://x.com/embered"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-ink underline decoration-fuchsia decoration-2 underline-offset-4 hover:text-fuchsia-hot"
+                >
+                  @embered
+                </a>
+              </p>
+            )}
+          </div>
         )}
       </div>
 
