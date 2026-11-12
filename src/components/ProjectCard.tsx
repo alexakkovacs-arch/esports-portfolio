@@ -18,6 +18,16 @@ export function ProjectCard({
       params={{ slug: project.slug }}
       className={`brutal brutal-hover group relative block ${tilts[index % tilts.length]}`}
     >
+      <div className="flex min-h-14 items-stretch border-b-[3px] border-ink">
+        <span className="flex w-14 shrink-0 items-center justify-center border-r-[3px] border-ink bg-cream font-mono text-sm font-bold">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <span
+          className={`flex min-w-0 flex-1 items-center px-3 py-2 font-mono text-[11px] font-bold uppercase leading-snug tracking-wider ${accentBg[project.accent]} ${project.accent === 'ink' ? 'text-cream' : 'text-ink'}`}
+        >
+          {project.roles[0]}
+        </span>
+      </div>
       <div className="relative aspect-[4/5] overflow-hidden border-b-[3px] border-ink bg-ink">
         {project.slug === 'league-impact-series' && (
           <Img
@@ -35,14 +45,6 @@ export function ProjectCard({
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
           className={`relative size-full transition-transform duration-500 group-hover:scale-105 ${project.slug === 'clol-championships' ? 'object-contain p-6' : project.slug === 'league-impact-series' ? 'object-contain' : 'object-cover'}`}
         />
-        <span className="absolute left-3 top-3 border-2 border-ink bg-cream px-2 py-1 font-mono text-[11px] font-bold">
-          {String(index + 1).padStart(2, '0')}
-        </span>
-        <span
-          className={`absolute -right-2 bottom-4 rotate-3 border-2 border-ink px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider ${accentBg[project.accent]} ${project.accent === 'ink' ? 'text-cream' : 'text-ink'}`}
-        >
-          {project.roles[0]}
-        </span>
       </div>
       <div className="flex items-start justify-between gap-3 p-5">
         <div>
