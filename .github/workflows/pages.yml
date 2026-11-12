@@ -31,9 +31,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Build portfolio
         env:
-          # Serve assets from the repository path for the GitHub Pages preview.
-          # Change to / only when a custom domain is configured in Pages settings.
-          GITHUB_PAGES_BASE_PATH: /esports-portfolio/
+          # Use the domain root when deploying at lexkk.com.
+          GITHUB_PAGES_BASE_PATH: /
         run: pnpm build
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
