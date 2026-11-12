@@ -401,10 +401,9 @@ export const projects: Project[] = [
           'Worked within a double-elimination, Bo5 competitive format environment',
         ],
         photos: [
-          { src: img('clol-logo-white.png'), alt: 'Championship broadcast overlay' },
-          { src: img('clol-thank-you.jpg'), alt: 'College League of Legends "Thank you" end screen' },
-          { src: img('alexa-broadcast-desk.jpg'), alt: 'Alexa on the broadcast desk during NACL playoffs' },
-          { src: img('na-varsity-cam.jpg'), alt: 'Player cam during a varsity broadcast' },
+          { src: img('clol-live-broadcast.webp'), alt: 'CLOL Championship live League of Legends match between CAL and UTM with player stats and broadcast graphics' },
+          { src: img('clol-overlay.jpg'), alt: 'CLOL Championship broadcast overlay featuring casters and champion select' },
+          { src: img('clol-thank-you.jpg'), alt: 'College League of Legends thank-you graphic and production credits' },
         ],
       },
     ],
