@@ -75,9 +75,6 @@ function Hero() {
 
           <div className="mt-8 max-w-xl space-y-4 text-lg leading-relaxed">
             <p>
-              <span className="font-serif text-3xl italic">I’m a freelance creative!</span>
-            </p>
-            <p>
               I bring <span className="highlight font-semibold">bold ideas</span> to
               life across esports events, live broadcast and marketing, from
               the gameday poster to the grand finals stream.
