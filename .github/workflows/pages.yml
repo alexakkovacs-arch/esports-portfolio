@@ -31,8 +31,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Build portfolio
         env:
-          # Use the domain root when deploying at lexkk.com.
-          GITHUB_PAGES_BASE_PATH: /
+          # Deploy as a GitHub Pages project site at /esports-portfolio/.
+          GITHUB_PAGES_BASE_PATH: /esports-portfolio/
         run: pnpm build
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
