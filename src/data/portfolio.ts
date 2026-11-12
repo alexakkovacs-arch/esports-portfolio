@@ -185,33 +185,49 @@ export const projects: Project[] = [
   {
     slug: 'na-rise-na-premier',
     title: 'NA Rise + NA Premier',
-    org: 'Division ONE',
-    roles: ['Technical Director', 'Socials Director'],
-    tags: ['Technical Direction', 'Socials', 'Campaigns'],
+    org: 'esclub.gg',
+    roles: ['Head of Marketing'],
+    tags: ['Community Management', 'Marketing', 'Tournament Operations', 'Player Relations'],
     summary:
-      'Led a St. Clair student team taking over production for Division ONE, and helped launch the league’s first season on social.',
-    accent: 'fuchsia',
-    logo: img('logos/division-one.png'),
+      'Leading marketing, player communications and community-focused campaigns for esclub.gg League of Legends competitions, including NA Rise and NA Premier.',
+    accent: 'steel',
+    logo: img('logos/rise.png'),
     cover: {
       src: img('na-rise-format-explainer.webp'),
-      alt: 'esclub.gg NA Rise and NA Premier tournament format explainer graphic',
+      alt: 'esclub.gg NA Rise tournament format explainer, designed to communicate the competition structure to players',
     },
     sections: [
       {
-        heading: 'Technical Director',
-        body: 'Lead an initiative between a group of students at SCC and D1 to take over production for Division ONE Spring Split 2026.',
-        photos: [
-          { src: img('d1-right-back.jpg'), alt: 'Division ONE "We’ll be right back" broadcast screen' },
-          { src: img('clol-gameplay.jpg'), alt: 'League of Legends broadcast gameplay with overlay' },
+        heading: 'Building the Community',
+        role: 'Head of Marketing · esclub.gg',
+        body: 'esclub.gg brings competitive League of Legends players together through organized community tournaments, including NA Rise and NA Premier. As Head of Marketing on a four-person team, I help connect players with these opportunities through outreach, clear communications, engaging content and day-to-day community support.',
+        bullets: [
+          'Lead player outreach, tournament announcements and community-facing communications.',
+          'Coordinate with creators, co-streamers and partners to extend tournament reach and participation.',
+          'Answer player questions and collaborate with the team on tournament planning and administration.',
         ],
       },
       {
-        heading: 'Socials Director',
-        body: 'Helped launch Division ONE’s inaugural season by creating content, supporting campaigns, and growing its social media presence.',
+        heading: 'Listening to Players',
+        role: 'Player feedback · NA Rise',
+        body: 'A strong community should help shape the events it plays in. For NA Rise, I helped gather feedback from participants and supported a captain vote on the playoff structure. The team used that input to revise the format and communicate the decision back to players.',
+        bullets: [
+          'Collected participant feedback and helped facilitate a captain-led vote on the playoff format.',
+          'Supported a revised playoff approach based on the community’s preferences.',
+          'Helped keep participants informed about tournament rules, updates and expectations.',
+        ],
+      },
+      {
+        heading: 'Marketing & Tournament Content',
+        role: 'Campaigns · Social Media · Player Communications',
+        body: 'I develop accessible, player-focused content for NA Rise and NA Premier, from tournament explainers and announcements to schedules, results and promotional posts. The goal is to make each competition easy to understand, follow and participate in.',
+        bullets: [
+          'Create and coordinate promotional graphics, social posts and tournament information.',
+          'Support coverage throughout competitions with updates for players and viewers.',
+          'Contribute to tournament operations, competitive structure and player communication alongside the organizing team.',
+        ],
         photos: [
-          { src: img('na-rise-format-explainer.webp'), alt: '"Promoted" graphic for Toasty' },
-          { src: img('d1-promoted-glyph.jpg'), alt: '"Promoted" graphic for Valorant player Glyph' },
-          { src: img('d1-promoted-cryogen.jpg'), alt: '"Promoted" graphic for Cryogen' },
+          { src: img('na-rise-format-explainer.webp'), alt: 'NA Rise tournament format explainer created for the esclub.gg community' },
         ],
       },
     ],
