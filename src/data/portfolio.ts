@@ -194,9 +194,9 @@ export const projects: Project[] = [
     title: 'NA Rise + NA Premier',
     org: 'esclub.gg',
     roles: ['Head of Marketing'],
-    tags: ['Community Management', 'Marketing', 'Tournament Operations', 'Player Relations'],
+    tags: ['Player-First Marketing', 'Social Media', 'Community Management', 'Tournament Operations'],
     summary:
-      'Leading marketing, player communications and community campaigns for esclub.gg League of Legends competitions, including NA Rise, LQL and NA Premier.',
+      'As Head of Marketing at esclub.gg, I put players first by turning league statistics, results and competitive storylines into social content that celebrates the community behind NA Rise, LQL and NA Premier.',
     accent: 'rise',
     logo: img('logos/na-rise-original.svg'),
     cover: {
@@ -206,15 +206,21 @@ export const projects: Project[] = [
     stats: [
       { value: '88', label: 'Team participations · All competitions' },
     ],
+    gallery: [
+      { src: img('esclub-club-broadcasts.webp'), alt: 'esclub.gg club broadcasts page featuring official streams and community co-streamers' },
+      { src: img('esclub-player-statistics.webp'), alt: 'esclub.gg NA Premier statistics dashboard with player performance, team rankings and competitive leaderboards' },
+      { src: img('esclub-top-laners.webp'), alt: 'NA Premier Top 5 top laners social graphic featuring player rankings and performance scores' },
+      { src: img('esclub-premier-results.webp'), alt: 'esclub.gg NA Premier Week 2 match results social media graphic' },
+    ],
     sections: [
       {
         heading: 'Building the Community',
         role: 'Head of Marketing · esclub.gg',
-        body: 'esclub.gg brings competitive League of Legends players together through organized community leagues and tournaments, including NA Rise, LQL and NA Premier. As Head of Marketing on a four-person team, I help connect players with these opportunities through outreach, clear communications, engaging content and day-to-day community support.',
+        body: 'esclub.gg takes a player-first approach to competitive League of Legends through organized community leagues and tournaments, including NA Rise, LQL and NA Premier. As Head of Marketing on a four-person team, I help players feel recognized and connected by promoting their achievements, sharing clear league information and building excitement around the people behind each match.',
         bullets: [
           'Lead player outreach, tournament announcements and community-facing communications.',
-          'Coordinate with creators, co-streamers and partners to extend tournament reach and participation.',
-          'Answer player questions and collaborate with the team on tournament planning and administration.',
+          'Highlight competitors, achievements and community storylines through social media.',
+          'Coordinate with creators and co-streamers while helping players navigate tournament information and updates.',
         ],
       },
       {
@@ -230,14 +236,24 @@ export const projects: Project[] = [
       {
         heading: 'Marketing & Tournament Content',
         role: 'Campaigns · Social Media · Player Communications',
-        body: 'I develop accessible, player-focused content for NA Rise and NA Premier, from tournament explainers and announcements to schedules, results and promotional posts. The goal is to make each competition easy to understand, follow and participate in.',
+        body: 'My work connects the competition to its community through tournament explainers, schedules, results, livestream promotion and player-focused graphics. I use information from esclub.gg and its league coverage to make each competition easier to follow while giving participants visibility beyond their matches.',
         bullets: [
-          'Create and coordinate promotional graphics, social posts and tournament information.',
-          'Support coverage throughout competitions with updates for players and viewers.',
+          'Create and coordinate promotional graphics, social posts, schedules and tournament information.',
+          'Translate league results, stats and player performances into community-facing updates.',
           'Contribute to tournament operations, competitive structure and player communication alongside the organizing team.',
         ],
         photos: [
           { src: img('na-rise-format-explainer.webp'), alt: 'NA Rise tournament format explainer created for the esclub.gg community' },
+        ],
+      },
+      {
+        heading: 'Putting Players First Through Stats',
+        role: 'League statistics · Player recognition · Social storytelling',
+        body: 'The esclub.gg website brings together competitive match results, individual performance statistics, team standings and player rankings. My role is not building the website or developing its statistics systems; I use the information they provide to create social media content that puts players in the spotlight. From Top 5 laners and weekly results to standout performances, these posts turn numbers into stories that recognize competitors and encourage the community to follow along.',
+        bullets: [
+          'Use the website’s player statistics and rankings to develop performance spotlights and Top 5 social graphics.',
+          'Share weekly match results and competitive updates that give teams and players visibility.',
+          'Promote official broadcasts and community co-streams so players and fans can connect with the action.',
         ],
       },
     ],
