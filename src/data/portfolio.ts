@@ -301,7 +301,7 @@ export const projects: Project[] = [
     slug: 'cie',
     title: 'Canadian Intercollegiate Exhibition',
     org: 'Canadian Intercollegiate Exhibition',
-    roles: ['Social Director', 'Broadcast Producer', 'Technical Director'],
+    roles: ['Social Lead', 'Broadcast Producer', 'Technical Director'],
     tags: ['Social Media Strategy', 'Bilingual Marketing', 'Community Engagement', 'Live Event Coverage', 'Broadcast Production'],
     summary:
       'Led bilingual English and French social media strategy, event coverage and sponsor communications for CIE 2026, while producing and technical directing collegiate esports broadcasts.',
@@ -328,8 +328,8 @@ export const projects: Project[] = [
     sections: [
       {
         heading: 'Social Direction & Marketing',
-        role: 'Social Director · May 2026',
-        body: 'As Social Director for CIE 2026, I oversaw the event’s social media strategy, content planning and live coverage for a national collegiate esports exhibition. I worked with organizers, creatives and broadcast staff to coordinate tournament promotion, announcements, event programming and sponsor messaging across platforms.',
+        role: 'Social Lead · May 2026',
+        body: 'As Social Lead for CIE 2026, I oversaw the event’s social media strategy, content planning and live coverage for a national collegiate esports exhibition. I worked with organizers, creatives and broadcast staff to coordinate tournament promotion, announcements, event programming and sponsor messaging across platforms.',
         bullets: [
           'Planned and scheduled campaigns from pre-event registration promotion through live event updates and results.',
           'Coordinated social deliverables with tournament, creative and broadcast teams.',
