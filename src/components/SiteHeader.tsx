@@ -7,7 +7,7 @@ const anchors = [
   { hash: 'skills', label: 'Skills' },
   { hash: 'work', label: 'Work' },
   { hash: 'awards', label: 'Awards' },
-  { hash: 'partners', label: 'Partners' },
+  { hash: 'partners', label: 'Who I’ve worked with' },
 ] as const
 
 export function SiteHeader() {
