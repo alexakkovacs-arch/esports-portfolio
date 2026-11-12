@@ -20,6 +20,8 @@
   --rise-blue-dark: #087698;
   --steel: #6e96b3;
   --tan: #e3b99f;
+  --mint: #a6dbc1;
+  --lilac: #c8afe7;
   --lis-pink: #e94b85;
 
   --background: var(--cream);
@@ -61,6 +63,8 @@
   --color-rise-dark: var(--rise-blue-dark);
   --color-steel: var(--steel);
   --color-tan: var(--tan);
+  --color-mint: var(--mint);
+  --color-lilac: var(--lilac);
   --color-lis: var(--lis-pink);
 
   --color-background: var(--background);

@@ -3,7 +3,7 @@
  * awards, partners and skills. Images are paths under /public.
  */
 
-export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise' | 'lis'
+export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise' | 'lis' | 'mint' | 'lilac'
 
 export type Photo = { src: string; alt: string }
 
@@ -53,7 +53,7 @@ export const skills: { label: string; blurb: string; accent: Accent }[] = [
   {
     label: 'Community Management',
     blurb: 'Creating meaningful connections through community events, experiences, and activations that bring players and fans together.',
-    accent: 'gold',
+    accent: 'mint',
   },
   {
     label: 'Marketing & Social Media',
@@ -73,7 +73,7 @@ export const skills: { label: string; blurb: string; accent: Accent }[] = [
   {
     label: 'Graphic Design',
     blurb: 'Gameday posts, promotional graphics, event branding, and broadcast visuals tailored to esports audiences.',
-    accent: 'fuchsia',
+    accent: 'lilac',
   },
   {
     label: 'Content',
@@ -483,5 +483,7 @@ export const accentBg: Record<Accent, string> = {
   steel: 'bg-steel',
   tan: 'bg-tan',
   lis: 'bg-lis',
+  mint: 'bg-mint',
+  lilac: 'bg-lilac',
   ink: 'bg-ink',
 }
