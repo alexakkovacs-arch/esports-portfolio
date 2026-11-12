@@ -239,10 +239,10 @@ export const projects: Project[] = [
     slug: 'league-impact-series',
     title: 'League Impact Series',
     org: 'Inclusive League of Legends Competition',
-    roles: ['Marketing & Social Media', 'Tournament Operations', 'Broadcast & Technical Direction'],
+    roles: ['Technical Director — Grand Finals LAN', 'Marketing & Social Media', 'Tournament Operations'],
     tags: ['Community Engagement', 'Marketing', 'Live Events', 'Broadcast Production'],
     summary:
-      'Helped bring an inclusive League of Legends competition to life, connecting North American and LATAM communities through marketing, tournament operations, live broadcasts and a Grand Finals LAN at St. Clair College.',
+      'Supported an inclusive League of Legends competition through marketing, tournament operations and group-stage broadcasts, and served as Technical Director for the Grand Finals LAN at St. Clair College.',
     accent: 'tan',
     cover: {
       src: img('lis-community-group.webp'),
@@ -271,12 +271,12 @@ export const projects: Project[] = [
       },
       {
         heading: 'Grand Finals LAN',
-        role: 'Event organizing · Technical direction',
-        body: 'One of the most meaningful parts of my work was helping bring the League Impact Series Grand Finals to St. Clair College’s esports venue. After the planning, staffing and production preparation, seeing players, staff and fans come together in person made the impact of the community clear.',
+        role: 'Technical Director · Grand Finals LAN · Event organizing',
+        body: 'I was the Technical Director for the League Impact Series Grand Finals LAN at St. Clair College’s esports venue. Alongside that responsibility, I helped bring the in-person event together through planning, staffing and production preparation. Seeing players, staff and fans connect in person was one of the most meaningful parts of the experience.',
         bullets: [
           'Helped coordinate the venue, event setup, staffing schedules and production readiness.',
           'Supported tournament administration, on-site operations and the live event experience.',
-          'Provided technical direction for the Grand Finals LAN broadcast.',
+          'Served as Technical Director for the Grand Finals LAN broadcast, overseeing the live technical execution.',
         ],
         photos: [
           { src: img('lis-group.jpg'), alt: 'League Impact Series participants and staff gathered at the LAN venue' },
@@ -285,7 +285,7 @@ export const projects: Project[] = [
       },
       {
         heading: 'Broadcast & Production',
-        role: 'B-stream direction · Broadcast coordination',
+        role: 'Group-stage B-stream direction · Broadcast coordination',
         body: 'I directed and switched secondary broadcasts during the group stage and helped coordinate coverage with tournament staff and on-air talent. The production work supported the wider goal of making competitive League of Legends accessible to the community watching and participating.',
         bullets: [
           'Directed and switched B-stream broadcasts during the group stage.',
