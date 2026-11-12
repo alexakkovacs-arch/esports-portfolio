@@ -11,9 +11,6 @@ export type EventEntry = {
 
 // Columns: year | event | date | organization | category | responsibilities (;) | attendance | notes
 const raw = `
-2022|Club Recruitment & Promotions|Fall 2022|UWinEsports|Campaign|Social Media; Graphics; Discord Promotion||First club marketing responsibilities
-2023|Winter Team Tryouts|Winter 2023|UWinEsports|Event Marketing|Social Media; Graphics; Discord Promotion||Multiple esports titles
-2023|Team & Roster Announcements|Winter 2023|UWinEsports|Campaign|Graphics; Social Media; Team Communications||
 2024|St. Clair March Break Camp|March 18, 2024|St. Clair College|Camp|Camp Counsellor||
 2024|Sakura Anime Fest 2024|April 13, 2024|St. Clair College|LAN / Convention|Tournament Admin - Mario Kart||
 2024|TXP 3|June 23, 2024|St. Clair College|Tournament / LAN|Tournament Admin; Social Media||
@@ -111,9 +108,12 @@ export const events: EventEntry[] = raw
     }
   })
 
-/** Events grouped by year label, newest first. */
+/** Events grouped under their start year, including multi-year events. */
 export function eventsByYear() {
   const groups = new Map<string, EventEntry[]>()
-  for (const e of events) groups.set(e.year, [...(groups.get(e.year) ?? []), e])
-  return [...groups.entries()].sort((a, b) => b[0].localeCompare(a[0]))
+  for (const e of events) {
+    const startYear = e.year.match(/\d{4}/)?.[0] ?? e.year
+    groups.set(startYear, [...(groups.get(startYear) ?? []), e])
+  }
+  return [...groups.entries()].sort((a, b) => Number(b[0]) - Number(a[0]))
 }
