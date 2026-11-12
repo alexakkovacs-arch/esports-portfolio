@@ -330,12 +330,6 @@ export const projects: Project[] = [
           'Created and shared French-language tournament information alongside English-language promotion.',
           'Used inclusive messaging to recognize Canada’s bilingual communities and encourage participation.',
         ],
-        photos: [
-          {
-            src: img('cie-registration-french.webp'),
-            alt: 'French-language CIE League of Legends promotion announcing that registration closes in seven days',
-          },
-        ],
       },
       {
         heading: 'Live Event Coverage & Community',
@@ -345,16 +339,6 @@ export const projects: Project[] = [
           'Shared game-day schedules, live-now announcements, match results and event highlights.',
           'Supported promotion of Industry Night programming and spoke on the Trail-Blazers student leadership panel.',
           'Recognized the organizers, volunteers and community members behind the event.',
-        ],
-        photos: [
-          {
-            src: img('cie-industry-night.webp'),
-            alt: 'CIE Industry Night Trail-Blazers Student Leaders in Esports panel announcement',
-          },
-          {
-            src: img('cie-volunteers.webp'),
-            alt: 'CIE 2026 Thank You Volunteers graphic featuring event staff and volunteer contributors',
-          },
         ],
       },
       {
@@ -375,6 +359,25 @@ export const projects: Project[] = [
           'Supported title-sponsor visibility and promotion of BMO financial literacy programming.',
           'Promoted partner activities, including a ONEofZERO gaming mouse giveaway during CIE streams.',
           'Integrated sponsor-related announcements into the broader event social media schedule.',
+        ],
+      },
+      {
+        heading: 'CIE Creative & Community Highlights',
+        role: 'Bilingual Marketing · Industry Night · Event Volunteers',
+        body: 'A selection of the visuals and community programming I helped promote for CIE 2026, including French-language tournament announcements, the Industry Night panel and recognition of the volunteers who brought the event together.',
+        photos: [
+          {
+            src: img('cie-registration-french.webp'),
+            alt: 'French-language CIE League of Legends promotion announcing that registration closes in seven days',
+          },
+          {
+            src: img('cie-industry-night.webp'),
+            alt: 'CIE Industry Night Trail-Blazers Student Leaders in Esports panel announcement',
+          },
+          {
+            src: img('cie-volunteers.webp'),
+            alt: 'CIE 2026 Thank You Volunteers graphic featuring event staff and volunteer contributors',
+          },
         ],
       },
     ],
