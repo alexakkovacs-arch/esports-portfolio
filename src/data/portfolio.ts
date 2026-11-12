@@ -238,25 +238,59 @@ export const projects: Project[] = [
   {
     slug: 'league-impact-series',
     title: 'League Impact Series',
-    org: 'Collegiate League of Legends',
-    roles: ['Broadcast Lead'],
-    tags: ['Broadcast', 'Talent', 'Tournament Ops'],
+    org: 'Inclusive League of Legends Competition',
+    roles: ['Marketing & Social Media', 'Tournament Operations', 'Broadcast & Technical Direction'],
+    tags: ['Community Engagement', 'Marketing', 'Live Events', 'Broadcast Production'],
     summary:
-      'Led the League of Legends Grand Finals broadcast with talent, student staff and tournament operations.',
+      'Helped bring an inclusive League of Legends competition to life, connecting North American and LATAM communities through marketing, tournament operations, live broadcasts and a Grand Finals LAN at St. Clair College.',
     accent: 'tan',
     cover: {
       src: img('lis-community-group.webp'),
-      alt: 'League Impact Series community, players, staff, and attendees gathered at the in-person finals',
+      alt: 'League Impact Series players, staff and community members together at the in-person Grand Finals',
     },
     sections: [
       {
-        heading: 'Grand Finals Broadcast',
-        body: 'Led the League of Legends Grand Finals broadcast, collaborating with Talent, Student Staff and Tournament Operations.',
+        heading: 'Building a Community',
+        role: 'Community engagement · Player experience',
+        body: 'League Impact Series created competitive opportunities for players from marginalized gaming communities while connecting League of Legends communities across North America and LATAM. I helped support the experience beyond the matches through community-facing communications, tournament coordination and collaboration with the people bringing the competition together.',
+        bullets: [
+          'Supported clear tournament information and player-facing updates throughout the competition.',
+          'Worked alongside organizers, talent and production staff to help create a welcoming, professional competitive experience.',
+          'Helped connect the online tournament to an in-person community moment at the Grand Finals.',
+        ],
+      },
+      {
+        heading: 'Marketing & Social Media',
+        role: 'Social strategy · Content · Promotion',
+        body: 'I developed a social media marketing plan for League Impact Series and supported its promotion throughout the competition. My focus was making the tournament easy to follow, giving participants visibility, and keeping fans connected to the action.',
+        bullets: [
+          'Developed the tournament’s social media plan, including content around teams, players, schedules and match coverage.',
+          'Supported promotional posts, event updates and live social coverage as the tournament progressed.',
+          'Coordinated with tournament staff, broadcast talent and co-streamers to keep communications aligned with the event.',
+        ],
+      },
+      {
+        heading: 'Grand Finals LAN',
+        role: 'Event organizing · Technical direction',
+        body: 'One of the most meaningful parts of my work was helping bring the League Impact Series Grand Finals to St. Clair College’s esports venue. After the planning, staffing and production preparation, seeing players, staff and fans come together in person made the impact of the community clear.',
+        bullets: [
+          'Helped coordinate the venue, event setup, staffing schedules and production readiness.',
+          'Supported tournament administration, on-site operations and the live event experience.',
+          'Provided technical direction for the Grand Finals LAN broadcast.',
+        ],
         photos: [
-          { src: img('lis-community-group.webp'), alt: 'Grand Finals caster cam layout' },
-          { src: img('na-player-highlight.jpg'), alt: 'Player highlight broadcast graphic for Wilson' },
-          { src: img('na-post-game-stats.jpg'), alt: 'Post-game stats broadcast graphic' },
-          { src: img('lis-group.jpg'), alt: 'Event attendees group photo at a LAN venue' },
+          { src: img('lis-group.jpg'), alt: 'League Impact Series participants and staff gathered at the LAN venue' },
+          { src: img('lis-community-group.webp'), alt: 'Players, staff and attendees together at the League Impact Series Grand Finals' },
+        ],
+      },
+      {
+        heading: 'Broadcast & Production',
+        role: 'B-stream direction · Broadcast coordination',
+        body: 'I directed and switched secondary broadcasts during the group stage and helped coordinate coverage with tournament staff and on-air talent. The production work supported the wider goal of making competitive League of Legends accessible to the community watching and participating.',
+        bullets: [
+          'Directed and switched B-stream broadcasts during the group stage.',
+          'Supported staffing, schedules and broadcast planning to keep match coverage organized.',
+          'Collaborated with tournament and production teams across match days and the LAN finals.',
         ],
       },
     ],
