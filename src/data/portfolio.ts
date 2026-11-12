@@ -42,6 +42,7 @@ export type Project = {
   summary: string
   accent: Accent
   cover: Photo
+  gallery?: Photo[]
   logo?: string
   stats?: { value: string; label: string }[]
   sections: ProjectSection[]
@@ -310,6 +311,20 @@ export const projects: Project[] = [
       src: img('cie-2026-cover.webp'),
       alt: 'CIE 2026 Canadian Intercollegiate Exhibition We Are Coming Back promotional poster',
     },
+    gallery: [
+      {
+        src: img('cie-registration-french.webp'),
+        alt: 'French-language CIE League of Legends promotion announcing that registration closes in seven days',
+      },
+      {
+        src: img('cie-industry-night.webp'),
+        alt: 'CIE Industry Night Trail-Blazers Student Leaders in Esports panel announcement',
+      },
+      {
+        src: img('cie-volunteers.webp'),
+        alt: 'CIE 2026 Thank You Volunteers graphic featuring event staff and volunteer contributors',
+      },
+    ],
     sections: [
       {
         heading: 'Social Direction & Marketing',
@@ -359,25 +374,6 @@ export const projects: Project[] = [
           'Supported title-sponsor visibility and promotion of BMO financial literacy programming.',
           'Promoted partner activities, including a ONEofZERO gaming mouse giveaway during CIE streams.',
           'Integrated sponsor-related announcements into the broader event social media schedule.',
-        ],
-      },
-      {
-        heading: 'CIE Creative & Community Highlights',
-        role: 'Bilingual Marketing · Industry Night · Event Volunteers',
-        body: 'A selection of the visuals and community programming I helped promote for CIE 2026, including French-language tournament announcements, the Industry Night panel and recognition of the volunteers who brought the event together.',
-        photos: [
-          {
-            src: img('cie-registration-french.webp'),
-            alt: 'French-language CIE League of Legends promotion announcing that registration closes in seven days',
-          },
-          {
-            src: img('cie-industry-night.webp'),
-            alt: 'CIE Industry Night Trail-Blazers Student Leaders in Esports panel announcement',
-          },
-          {
-            src: img('cie-volunteers.webp'),
-            alt: 'CIE 2026 Thank You Volunteers graphic featuring event staff and volunteer contributors',
-          },
         ],
       },
     ],
