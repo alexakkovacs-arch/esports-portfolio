@@ -5,13 +5,19 @@ import { pageMeta } from '../lib/site'
 
 export const Route = createFileRoute('/events')({
   head: () =>
-    pageMeta('Every event', 'A full history of every esports event, broadcast and campaign Alexa has worked on since 2022.'),
+    pageMeta('Every event', 'A history of esports events, broadcasts and campaigns Alexa has worked on, grouped by their starting year.'),
   component: EventsPage,
 })
 
 function EventsPage() {
   const groups = eventsByYear()
   const orgs = new Set(events.map((e) => e.org)).size
+  const yearRange =
+    groups.length === 0
+      ? '—'
+      : groups.length === 1
+        ? groups[0][0]
+        : `${groups[groups.length - 1][0]}–${groups[0][0]}`
 
   return (
     <article className="px-4 py-16 sm:px-6">
@@ -31,7 +37,7 @@ function EventsPage() {
           {[
             ['Events', events.length],
             ['Organizations', orgs],
-            ['Years', groups.length > 0 ? '2022–2026' : '—'],
+            ['Years', yearRange],
           ].map(([label, value]) => (
             <div key={label} className="brutal-sm bg-cream px-5 py-3">
               <dt className="font-mono text-[11px] uppercase tracking-widest">{label}</dt>
