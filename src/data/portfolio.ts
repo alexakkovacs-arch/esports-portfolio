@@ -378,7 +378,7 @@ export const projects: Project[] = [
     roles: ['Technical Director', 'Producer'],
     tags: ['Technical Direction', 'Producing', 'Broadcast'],
     summary:
-      'Produced and technically directed broadcasts throughout the 2025 College League of Legends Championship bracket, through the semifinals. The double-elimination Bo5 event was delivered in partnership with GGTech and St. Clair College.',
+      'Produced and technically directed broadcasts across the 2025 College League of Legends Championship bracket through the semifinals. The double-elimination Bo5 event was delivered in partnership with GGTech and St. Clair College.',
     accent: 'steel',
     logo: img('logos/college-lol.png'),
     cover: {
