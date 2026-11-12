@@ -104,7 +104,7 @@ export const projects: Project[] = [
       {
         heading: 'Events & Community',
         role: 'Event planning, community experiences and activations',
-        body: 'I bring players and fans together through in-person experiences: festivals, collegiate competitions, and student-led gaming events. Alongside large events, I have organized TFT and ARAM tournaments, League of Legends Worlds watch parties, and other community activities that help students connect. I also support Winter WonderLAN and lead esports camp activities.',
+        body: 'I bring players and fans together through in-person experiences: festivals, collegiate competitions, and student-led gaming events. Alongside large events, I have organized TFT and ARAM tournaments, League of Legends Worlds watch parties, and other community activities that help students connect. I also support youth-focused initiatives, including WEHSEC and esports camps, that create opportunities for young people to experience esports, develop skills, and connect with their peers.',
         events: [
           {
             title: 'Sakura Anime Fest',
