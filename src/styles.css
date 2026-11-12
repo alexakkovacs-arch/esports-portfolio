@@ -1,0 +1,274 @@
+@import 'tailwindcss' source('../');
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Fuchsia / black / cream "anti-design" palette, lifted from Alexa's
+ * existing Canva portfolio. Every colour on the site comes from here.
+ */
+:root {
+  --cream: #fff3ef;
+  --ink: #0b0b0b;
+  --fuchsia: #ff86c8;
+  --fuchsia-hot: #ff4fae;
+  --gold: #eaa93d;
+  --saints-green: #78b255;
+  --saints-green-dark: #285b24;
+  --rise-blue: #49b0d3;
+  --rise-blue-dark: #087698;
+  --steel: #6e96b3;
+  --tan: #e3b99f;
+  --mint: #a6dbc1;
+  --lilac: #c8afe7;
+  --lis-pink: #e94b85;
+  --cie-red: #eb1735;
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--cream);
+  --secondary: var(--fuchsia);
+  --secondary-foreground: var(--ink);
+  --muted: #f6e3dc;
+  --muted-foreground: #4a4040;
+  --accent: var(--fuchsia);
+  --accent-foreground: var(--ink);
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: var(--ink);
+  --input: var(--ink);
+  --ring: var(--fuchsia-hot);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --font-display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  --font-serif: 'Instrument Serif', 'Times New Roman', serif;
+  --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-fuchsia: var(--fuchsia);
+  --color-fuchsia-hot: var(--fuchsia-hot);
+  --color-gold: var(--gold);
+  --color-saints: var(--saints-green);
+  --color-saints-dark: var(--saints-green-dark);
+  --color-rise: var(--rise-blue);
+  --color-rise-dark: var(--rise-blue-dark);
+  --color-steel: var(--steel);
+  --color-tan: var(--tan);
+  --color-mint: var(--mint);
+  --color-lilac: var(--lilac);
+  --color-lis: var(--lis-pink);
+  --color-cie: var(--cie-red);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-spin-slow: spin 24s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(var(--r, 0deg));
+    }
+    50% {
+      transform: translateY(-12px) rotate(var(--r, 0deg));
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 bg-background text-foreground font-sans antialiased;
+    /* faint paper grain */
+    background-image: radial-gradient(
+      rgb(11 11 11 / 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+  ::selection {
+    background: var(--fuchsia);
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--fuchsia-hot);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Chunky outlined box with a hard offset shadow — the core "sticker" look. */
+  .brutal {
+    @apply border-[3px] border-ink bg-white;
+    box-shadow: 6px 6px 0 0 var(--ink);
+  }
+  .brutal-sm {
+    @apply border-2 border-ink bg-white;
+    box-shadow: 3px 3px 0 0 var(--ink);
+  }
+  .brutal-hover {
+    transition:
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+  .brutal-hover:hover {
+    transform: translate(-3px, -3px) rotate(0deg) !important;
+    box-shadow: 10px 10px 0 0 var(--ink);
+  }
+
+  .display {
+    @apply font-display uppercase leading-[0.86] tracking-tight;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em];
+  }
+  .highlight {
+    background: linear-gradient(
+      to top,
+      var(--fuchsia) 0 42%,
+      transparent 42% 100%
+    );
+    padding-inline: 0.08em;
+  }
+  .outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ink);
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 border-[3px] border-ink px-5 py-3 font-mono text-sm font-bold uppercase tracking-wider transition-transform;
+    box-shadow: 4px 4px 0 0 var(--ink);
+  }
+  .btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--ink);
+  }
+  .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 var(--ink);
+  }
+  .btn-pink {
+    @apply bg-fuchsia text-ink;
+  }
+  .btn-ink {
+    @apply bg-ink text-cream;
+    box-shadow: 4px 4px 0 0 var(--fuchsia);
+  }
+  .btn-ink:hover {
+    box-shadow: 6px 6px 0 0 var(--fuchsia);
+  }
+
+  .lis-page .tape::before {
+    background: rgb(233 75 133 / 0.76);
+  }
+  .rise-page .tape::before {
+    background: rgb(73 176 211 / 0.83);
+  }
+  .saints-page .tape::before {
+    background: rgb(120 178 85 / 0.83);
+  }
+  .saints-page .saints-burst {
+    filter: hue-rotate(82deg) saturate(0.85);
+  }
+  .cie-page .tape::before {
+    background: rgb(255 243 239 / 0.75);
+  }
+
+  .tape::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 96px;
+    height: 26px;
+    transform: translateX(-50%) rotate(-4deg);
+    background: rgb(255 134 200 / 0.75);
+    border: 1px solid rgb(11 11 11 / 0.15);
+    z-index: 2;
+  }
+
+  .contact-input {
+    @apply w-full border-[3px] border-ink bg-white px-4 py-3 font-sans text-base placeholder:text-ink/40 focus-visible:bg-cream;
+  }
+  .contact-button {
+    @apply disabled:cursor-wait disabled:opacity-70;
+  }
+  .ticker-track {
+    animation: ticker 40s linear infinite;
+  }
+  .ticker:hover .ticker-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Keep the roles ticker moving (slower) even with reduced motion turned on.
+     It can still be paused by hovering it. */
+  .ticker .ticker-track {
+    animation-duration: 70s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
