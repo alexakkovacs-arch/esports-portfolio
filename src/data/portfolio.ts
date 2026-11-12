@@ -490,18 +490,19 @@ export type Award = {
   result: 'Winner' | 'Finalist'
   title: string
   recipient: string
+  organization: string
   year: number
 }
 
 export const awards: Award[] = [
-  { result: 'Winner', title: 'NACE Student Leadership Award', recipient: 'Alexa Kovacevich', year: 2026 },
-  { result: 'Winner', title: 'Director’s Award', recipient: 'Alexa Kovacevich', year: 2026 },
-  { result: 'Winner', title: 'Marketing Team Member of the Year', recipient: 'Alexa Kovacevich', year: 2025 },
-  { result: 'Finalist', title: 'Social Media Producer of the Year', recipient: 'Alexa Kovacevich', year: 2025 },
-  { result: 'Winner', title: 'Marketing Team of the Year', recipient: 'St. Clair College', year: 2025 },
-  { result: 'Winner', title: 'Broadcast Team of the Year', recipient: 'St. Clair College', year: 2025 },
-  { result: 'Winner', title: 'Production Team of the Year', recipient: 'St. Clair College', year: 2025 },
-  { result: 'Winner', title: 'Marketing Team of the Year', recipient: 'St. Clair College', year: 2024 },
+  { result: 'Winner', title: 'NACE Student Leadership Award', recipient: 'Alexa Kovacevich', organization: 'NACE', year: 2026 },
+  { result: 'Winner', title: 'Director’s Award', recipient: 'Alexa Kovacevich', organization: 'St. Clair College', year: 2026 },
+  { result: 'Winner', title: 'Marketing Team Member of the Year', recipient: 'Alexa Kovacevich', organization: 'St. Clair College', year: 2025 },
+  { result: 'Finalist', title: 'Social Media Producer of the Year', recipient: 'Alexa Kovacevich', organization: 'NACE', year: 2025 },
+  { result: 'Winner', title: 'Marketing Team of the Year', recipient: 'St. Clair College', organization: 'NACE', year: 2025 },
+  { result: 'Winner', title: 'Broadcast Team of the Year', recipient: 'St. Clair College', organization: 'NACE', year: 2025 },
+  { result: 'Winner', title: 'Production Team of the Year', recipient: 'St. Clair College', organization: 'EsportsU', year: 2025 },
+  { result: 'Winner', title: 'Marketing Team of the Year', recipient: 'St. Clair College', organization: 'NACE', year: 2024 },
 ]
 
 export const awardBodies = ['St. Clair College', 'NACE Awards', 'EsportsU Awards']

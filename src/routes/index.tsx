@@ -330,6 +330,9 @@ function Awards() {
                 </p>
                 <p className="text-lg font-bold leading-tight">{a.title}</p>
                 <p className="text-sm text-ink/70">{a.recipient}</p>
+                <p className="mt-1 font-mono text-[11px] font-bold uppercase tracking-wide text-ink/70">
+                  Presented by {a.organization}
+                </p>
               </div>
               <span className="display text-4xl">{a.year}</span>
             </li>
