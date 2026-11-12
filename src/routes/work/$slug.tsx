@@ -27,6 +27,7 @@ function ProjectPage() {
   const next = projects[(index + 1) % projects.length]
   const darkAccent = project.accent === 'ink'
   const isSaints = project.slug === 'st-clair-saints'
+  const isEsclub = project.slug === 'na-rise-na-premier'
 
   return (
     <article className={isSaints ? 'saints-page' : undefined}>
@@ -48,7 +49,17 @@ function ProjectPage() {
             >
               <ArrowLeft size={14} aria-hidden="true" /> All projects
             </Link>
-            <p className="eyebrow mt-10">{project.org}</p>
+            <div className={isEsclub ? 'mt-10 flex items-center gap-4 sm:gap-5' : 'mt-10'}>
+              <p className="eyebrow">{project.org}</p>
+              {isEsclub && project.logo && (
+                <Img
+                  src={project.logo}
+                  alt="NA Rise logo"
+                  width={120}
+                  className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
+                />
+              )}
+            </div>
             <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
               {project.title}
             </h1>
