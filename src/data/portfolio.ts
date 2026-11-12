@@ -191,7 +191,7 @@ export const projects: Project[] = [
     summary:
       'Leading marketing, player communications and community-focused campaigns for esclub.gg League of Legends competitions, including NA Rise and NA Premier.',
     accent: 'steel',
-    logo: img('logos/rise.png'),
+    logo: img('logos/na-rise.svg'),
     cover: {
       src: img('na-rise-format-explainer.webp'),
       alt: 'esclub.gg NA Rise tournament format explainer, designed to communicate the competition structure to players',
