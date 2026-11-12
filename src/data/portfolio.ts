@@ -97,8 +97,8 @@ export const projects: Project[] = [
     accent: 'saints',
     logo: img('logos/st-clair-saints.png'),
     cover: {
-      src: img('saints-group.jpg'),
-      alt: 'St. Clair Saints players and staff posing together on a blue-lit stage',
+      src: img('sgs-group.jpg'),
+      alt: 'Event staff and attendees posing for a group photo in the St. Clair esports venue',
     },
     sections: [
       {
@@ -140,14 +140,6 @@ export const projects: Project[] = [
           { src: img('scc-camp-session.webp'), alt: 'Leading a content creation activity with students during a St. Clair esports camp' },
           { src: img('scc-tft-organizing.webp'), alt: 'Organizing and supporting participants during a St. Clair Teamfight Tactics tournament' },
           { src: img('scc-lan-of-the-dead.webp'), alt: 'LAN of the Dead student event staff gathered together at St. Clair College' },
-        ],
-      },
-      {
-        heading: 'Leadership & Recognition',
-        role: 'Director’s Award · 2026',
-        body: 'Alongside my work on campus events, student programming and broadcasts, I received the Director’s Award in 2026 at St. Clair College.',
-        photos: [
-          { src: img('scc-directors-award.webp'), alt: 'Receiving the St. Clair College Director’s Award at the 2026 banquet' },
         ],
       },
       {
