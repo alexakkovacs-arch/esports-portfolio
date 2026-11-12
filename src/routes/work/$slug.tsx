@@ -26,9 +26,10 @@ function ProjectPage() {
   const index = projects.findIndex((p) => p.slug === slug)
   const next = projects[(index + 1) % projects.length]
   const darkAccent = project.accent === 'ink'
+  const isSaints = project.slug === 'st-clair-saints'
 
   return (
-    <article>
+    <article className={isSaints ? 'saints-page' : undefined}>
       <header
         className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
@@ -36,7 +37,7 @@ function ProjectPage() {
           src={assetUrl('/img/shapes/burst-blue.svg')}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70"
+          className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70 ${isSaints ? 'saints-burst' : ''}`}
         />
         <div className="relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:py-20">
           <div>
@@ -85,6 +86,16 @@ function ProjectPage() {
               sizes="(min-width: 1024px) 420px, 90vw"
               className="aspect-[4/5] w-full object-cover"
             />
+            {isSaints && project.logo && (
+              <div className="absolute -bottom-5 -left-5 z-10 -rotate-6 border-[3px] border-ink bg-cream p-3 shadow-[5px_5px_0_0_var(--saints-green)] sm:-left-10">
+                <Img
+                  src={project.logo}
+                  alt="St. Clair Saints Esports logo"
+                  width={220}
+                  className="h-24 w-32 object-contain sm:w-40"
+                />
+              </div>
+            )}
           </figure>
         </div>
       </header>
@@ -110,7 +121,7 @@ function ProjectPage() {
                   <ul className="max-w-2xl space-y-3">
                     {section.bullets.map((b) => (
                       <li key={b} className="flex gap-3">
-                        <span className="mt-0.5 text-fuchsia-hot" aria-hidden="true">✺</span>
+                        <span className={`mt-0.5 ${isSaints ? 'text-saints-dark' : 'text-fuchsia-hot'}`} aria-hidden="true">✺</span>
                         {b}
                       </li>
                     ))}
@@ -118,6 +129,37 @@ function ProjectPage() {
                 )}
               </div>
             </div>
+
+            {section.events && section.events.length > 0 && (
+              <ul className="mt-12 grid gap-8 md:grid-cols-2">
+                {section.events.map((event, ei) => (
+                  <li
+                    key={event.title}
+                    className={`brutal overflow-hidden ${ei % 2 ? 'md:translate-y-4' : ''}`}
+                  >
+                    <div className="aspect-[16/9] overflow-hidden border-b-[3px] border-ink bg-ink">
+                      <Img
+                        src={event.photo.src}
+                        alt={event.photo.alt}
+                        width={800}
+                        sizes="(min-width: 768px) 46vw, 94vw"
+                        className={`h-full w-full ${event.fit === 'contain' ? 'object-contain p-6' : 'object-cover'}`}
+                      />
+                    </div>
+                    <div className="p-6">
+                      <p className="inline-flex border-2 border-ink bg-saints px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest">
+                        {event.year}
+                      </p>
+                      <h3 className="display mt-4 text-3xl sm:text-4xl">{event.title}</h3>
+                      <p className="mt-3 font-mono text-[11px] font-bold uppercase tracking-wider text-ink/70">
+                        {event.role}
+                      </p>
+                      <p className="mt-4 text-base leading-relaxed">{event.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {section.videos && <VideoGrid videos={section.videos} />}
 

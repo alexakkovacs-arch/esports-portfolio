@@ -3,7 +3,7 @@
  * awards, partners and skills. Images are paths under /public.
  */
 
-export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink'
+export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints'
 
 export type Photo = { src: string; alt: string }
 
@@ -14,6 +14,15 @@ export type Video = {
   vertical?: boolean
 }
 
+export type EventHighlight = {
+  title: string
+  year: string
+  role: string
+  description: string
+  photo: Photo
+  fit?: 'contain' | 'cover'
+}
+
 export type ProjectSection = {
   heading: string
   role?: string
@@ -21,6 +30,7 @@ export type ProjectSection = {
   bullets?: string[]
   photos?: Photo[]
   videos?: Video[]
+  events?: EventHighlight[]
 }
 
 export type Project = {
@@ -79,17 +89,53 @@ export const projects: Project[] = [
     slug: 'st-clair-saints',
     title: 'St. Clair Saints',
     org: 'St. Clair College Esports',
-    roles: ['Marketing, Broadcast and Events Coordinator'],
-    tags: ['Creative Direction', 'Content', 'Production', 'Events'],
+    roles: ['Marketing, Events and Broadcast Coordinator'],
+    tags: ['Community Events', 'Marketing', 'Creative Direction', 'Broadcast'],
     summary:
-      'Creative direction, content, live production and events for the St. Clair College varsity esports program.',
-    accent: 'gold',
+      'Building community through campus events, player experiences, creative campaigns and live esports production at St. Clair College.',
+    accent: 'saints',
     logo: img('logos/st-clair-saints.png'),
     cover: {
       src: img('saints-group.jpg'),
       alt: 'St. Clair Saints players and staff posing together on a blue-lit stage',
     },
     sections: [
+      {
+        heading: 'Events & Community',
+        role: 'Event planning, community experiences and activations',
+        body: 'I bring players and fans together through in-person experiences: large festivals, collegiate competitions, campus gaming events and community activations. My St. Clair work also includes League of Legends Worlds watch parties, Winter WonderLAN, ARAM Mayhem, TFT tournaments and leading esports camp activities.',
+        events: [
+          {
+            title: 'Sakura Anime Fest',
+            year: '2026',
+            role: 'Event Director',
+            description: 'Directed an anime and gaming festival for 610+ attendees and 25+ vendors, coordinating the budget, vendors, staffing and on-site operations.',
+            photo: { src: img('sakura-crowd.jpg'), alt: 'Sakura Anime Fest attendees exploring the vendor hall' },
+          },
+          {
+            title: 'The Summoning',
+            year: '2026',
+            role: 'Event Planning · Tournament Operations · Marketing',
+            description: 'Helped organize the tournament experience and supported social media, graphics and video content for an event with approximately 1,000 attendees.',
+            photo: { src: img('logos/the-summoning.png'), alt: 'The Summoning esports event logo' },
+            fit: 'contain',
+          },
+          {
+            title: 'Saints Gauntlet Series',
+            year: '2024–2026',
+            role: 'Branding · Tournament Operations · Broadcast',
+            description: 'Developed the series identity and supported recurring competitive events through community promotion, event administration and production.',
+            photo: { src: img('sgs-group.jpg'), alt: 'Saints Gauntlet Series competitors and event staff posing together' },
+          },
+          {
+            title: 'Canadian Intercollegiate Exhibition',
+            year: '2026',
+            role: 'Social Director · Production',
+            description: 'Led social content and event coverage for a Canadian collegiate esports exhibition, coordinating promotional updates and broadcast deliverables.',
+            photo: { src: img('cie-stage.jpg'), alt: 'Presenters at the Canadian Intercollegiate Exhibition event stage' },
+          },
+        ],
+      },
       {
         heading: 'Creative Direction',
         body: 'Leading semester-based creative direction and shaping brand visuals to stay ahead of emerging esports trends.',
@@ -119,8 +165,8 @@ export const projects: Project[] = [
         videos: [{ id: 'TTIxacKXDOE', title: 'The Journey: Jazzyk1ns' }],
       },
       {
-        heading: 'Production and Events',
-        body: 'Handling multiple roles in St. Clair Saints events, including planning, live production, tournament coordination, content and ensuring smooth and engaging experiences for players and the community.',
+        heading: 'Broadcast & Production',
+        body: 'Behind the scenes, I support the live experience through technical direction, production planning, broadcast coordination and player-focused coverage.',
         photos: [
           { src: img('saints-arena.jpg'), alt: 'St. Clair esports arena during a live event' },
           { src: img('saints-control-room.jpg'), alt: 'Broadcast control room monitors during a Saints production' },
@@ -412,6 +458,7 @@ export function getProject(slug: string) {
 export const accentBg: Record<Accent, string> = {
   fuchsia: 'bg-fuchsia',
   gold: 'bg-gold',
+  saints: 'bg-saints',
   steel: 'bg-steel',
   tan: 'bg-tan',
   ink: 'bg-ink',

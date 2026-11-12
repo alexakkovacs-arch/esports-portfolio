@@ -14,6 +14,8 @@
   --fuchsia: #ff86c8;
   --fuchsia-hot: #ff4fae;
   --gold: #eaa93d;
+  --saints-green: #7bc34a;
+  --saints-green-dark: #316f29;
   --steel: #6e96b3;
   --tan: #e3b99f;
 
@@ -50,6 +52,8 @@
   --color-fuchsia: var(--fuchsia);
   --color-fuchsia-hot: var(--fuchsia-hot);
   --color-gold: var(--gold);
+  --color-saints: var(--saints-green);
+  --color-saints-dark: var(--saints-green-dark);
   --color-steel: var(--steel);
   --color-tan: var(--tan);
 
@@ -188,6 +192,12 @@
     box-shadow: 6px 6px 0 0 var(--fuchsia);
   }
 
+  .saints-page .tape::before {
+    background: rgb(123 195 74 / 0.83);
+  }
+  .saints-page .saints-burst {
+    filter: hue-rotate(82deg) saturate(0.85);
+  }
   .tape::before {
     content: '';
     position: absolute;
