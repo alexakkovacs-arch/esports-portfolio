@@ -249,6 +249,17 @@ function Featured() {
                 </li>
               ))}
             </ul>
+            <p className="mt-6 text-center font-mono text-xs uppercase tracking-wider text-cream/70">
+              Photos taken by{' '}
+              <a
+                href="https://x.com/embered"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-cream underline decoration-fuchsia decoration-2 underline-offset-4 hover:text-fuchsia"
+              >
+                @embered
+              </a>
+            </p>
           </div>
         )}
       </div>
