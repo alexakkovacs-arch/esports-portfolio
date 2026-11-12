@@ -61,9 +61,20 @@ function ProjectPage() {
                 />
               )}
             </div>
-            <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
-              {project.title}
-            </h1>
+            {isLIS ? (
+              <h1 className="display mt-3">
+                <span className="block whitespace-nowrap text-[clamp(2.4rem,4.5vw,5.4rem)]">
+                  League Impact
+                </span>
+                <span className="block text-[clamp(4rem,8vw,8rem)]">
+                  Series
+                </span>
+              </h1>
+            ) : (
+              <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
+                {project.title}
+              </h1>
+            )}
             <ul className="mt-6 flex flex-wrap gap-2">
               {project.roles.map((r) => (
                 <li
@@ -88,7 +99,7 @@ function ProjectPage() {
               </dl>
             )}
           </div>
-          <figure className={`brutal tape relative mx-auto w-full rotate-2 p-3 ${isSaints || isLIS ? 'max-w-[640px]' : 'max-w-md'}`}>
+          <figure className={`brutal relative mx-auto w-full rotate-2 p-3 ${isLIS ? 'mt-32 sm:mt-40' : 'tape'} ${isSaints || isLIS ? 'max-w-[640px]' : 'max-w-md'}`}>
             <Img
               src={project.cover.src}
               alt={project.cover.alt}
@@ -107,7 +118,7 @@ function ProjectPage() {
               />
             )}
             {isLIS && project.logo && (
-              <div className="absolute -top-7 left-5 z-20 w-[55%] max-w-64 -rotate-3 border-[3px] border-ink bg-cream p-2 shadow-[5px_5px_0_0_var(--ink)] sm:-top-8 sm:left-8 sm:p-3">
+              <div className="absolute -top-28 left-1/2 z-20 w-[42%] max-w-56 -translate-x-1/2 -rotate-3 border-[3px] border-ink bg-cream p-2 shadow-[5px_5px_0_0_var(--ink)] sm:-top-36 sm:p-3">
                 <Img
                   src={project.logo}
                   alt="League Impact Series logo"
