@@ -304,7 +304,7 @@ export const projects: Project[] = [
     roles: ['Social Lead', 'Broadcast Producer', 'Technical Director'],
     tags: ['Social Media Strategy', 'Bilingual Marketing', 'Community Engagement', 'Live Event Coverage', 'Broadcast Production'],
     summary:
-      'Led bilingual English and French social media strategy, event coverage and sponsor communications for CIE 2026, while producing and technical directing collegiate esports broadcasts.',
+      'Led bilingual English and French social media strategy and event coverage for CIE 2026, including sponsor-related social deliverables, while producing and technical directing collegiate esports broadcasts.',
     accent: 'cie',
     logo: img('logos/cie.png'),
     cover: {
@@ -329,11 +329,11 @@ export const projects: Project[] = [
       {
         heading: 'Social Direction & Marketing',
         role: 'Social Lead · May 2026',
-        body: 'As Social Lead for CIE 2026, I oversaw the event’s social media strategy, content planning and live coverage for a national collegiate esports exhibition. I worked with organizers, creatives and broadcast staff to coordinate tournament promotion, announcements, event programming and sponsor messaging across platforms.',
+        body: 'As Social Lead for CIE 2026, I oversaw the event’s social media strategy, content planning and live coverage for a national collegiate esports exhibition. I worked with organizers, creatives and broadcast staff on tournament promotion, announcements, event programming and publishing sponsor-related social content.',
         bullets: [
           'Planned and scheduled campaigns from pre-event registration promotion through live event updates and results.',
           'Coordinated social deliverables with tournament, creative and broadcast teams.',
-          'Directed promotional graphics, announcements, schedules and sponsor-related content for collegiate esports audiences.',
+          'Directed promotional graphics, announcements and schedules, and helped fulfill sponsor deliverables through social media posts.',
         ],
       },
       {
@@ -367,13 +367,13 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'Sponsors & Activations',
-        role: 'Partner Communications · BMO Title Sponsor',
-        body: 'Sponsor visibility was part of CIE’s event experience. I supported promotional deliverables featuring BMO, the event’s title sponsor, and helped communicate programming and partner activations to audiences following the exhibition.',
+        heading: 'Sponsor Deliverables & Activations',
+        role: 'Social Media Deliverables · BMO Title Sponsor',
+        body: 'I helped fulfill CIE’s sponsor deliverables through scheduled social media posts and promotional content, including posts featuring BMO, the event’s title sponsor. My work focused on publishing and supporting agreed promotional materials for the event.',
         bullets: [
-          'Supported title-sponsor visibility and promotion of BMO financial literacy programming.',
-          'Promoted partner activities, including a ONEofZERO gaming mouse giveaway during CIE streams.',
-          'Integrated sponsor-related announcements into the broader event social media schedule.',
+          'Supported BMO title-sponsor deliverables by posting promotional content, including financial literacy programming.',
+          'Helped publish social posts promoting partner activities, including a ONEofZERO gaming mouse giveaway during CIE streams.',
+          'Included sponsor-related posts in the event’s social media publishing schedule.',
         ],
       },
     ],
