@@ -3,7 +3,7 @@
  * awards, partners and skills. Images are paths under /public.
  */
 
-export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise'
+export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise' | 'lis'
 
 export type Photo = { src: string; alt: string }
 
@@ -243,7 +243,8 @@ export const projects: Project[] = [
     tags: ['Community Engagement', 'Marketing', 'Live Events', 'Broadcast Production'],
     summary:
       'Supported an inclusive League of Legends competition through marketing, tournament operations and group-stage broadcasts, and served as Technical Director for the Grand Finals LAN at St. Clair College.',
-    accent: 'tan',
+    accent: 'lis',
+    logo: img('logos/league-impact-series.svg'),
     cover: {
       src: img('lis-community-group.webp'),
       alt: 'League Impact Series players, staff and community members together at the in-person Grand Finals',
@@ -481,5 +482,6 @@ export const accentBg: Record<Accent, string> = {
   rise: 'bg-rise',
   steel: 'bg-steel',
   tan: 'bg-tan',
+  lis: 'bg-lis',
   ink: 'bg-ink',
 }

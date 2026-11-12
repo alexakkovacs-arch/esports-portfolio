@@ -28,9 +28,10 @@ function ProjectPage() {
   const darkAccent = project.accent === 'ink'
   const isSaints = project.slug === 'st-clair-saints'
   const isEsclub = project.slug === 'na-rise-na-premier'
+  const isLIS = project.slug === 'league-impact-series'
 
   return (
-    <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : undefined}>
+    <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : isLIS ? 'lis-page' : undefined}>
       <header
         className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
@@ -40,7 +41,7 @@ function ProjectPage() {
           aria-hidden="true"
           className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70 ${isSaints ? 'saints-burst' : ''}`}
         />
-        <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
+        <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints || isLIS ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
           <div>
             <Link
               to="/"
@@ -60,6 +61,16 @@ function ProjectPage() {
                 />
               )}
             </div>
+            {isLIS && project.logo && (
+              <div className="mt-5 inline-block w-full max-w-52 -rotate-3 border-[3px] border-ink bg-cream p-3 shadow-[5px_5px_0_0_var(--ink)] sm:max-w-64">
+                <Img
+                  src={project.logo}
+                  alt="League Impact Series logo"
+                  width={300}
+                  className="block h-auto w-full object-contain"
+                />
+              </div>
+            )}
             <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
               {project.title}
             </h1>
@@ -87,15 +98,15 @@ function ProjectPage() {
               </dl>
             )}
           </div>
-          <figure className={`brutal tape relative mx-auto w-full rotate-2 p-3 ${isSaints ? 'max-w-[640px]' : 'max-w-md'}`}>
+          <figure className={`brutal tape relative mx-auto w-full rotate-2 p-3 ${isSaints || isLIS ? 'max-w-[640px]' : 'max-w-md'}`}>
             <Img
               src={project.cover.src}
               alt={project.cover.alt}
-              width={isSaints ? 760 : 480}
+              width={isSaints || isLIS ? 760 : 480}
               loading="eager"
               fetchPriority="high"
-              sizes={isSaints ? '(min-width: 1024px) 50vw, 90vw' : '(min-width: 1024px) 420px, 90vw'}
-              className={isSaints ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
+              sizes={isSaints || isLIS ? '(min-width: 1024px) 50vw, 90vw' : '(min-width: 1024px) 420px, 90vw'}
+              className={isSaints || isLIS ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
             />
             {isSaints && project.logo && (
               <Img
@@ -131,7 +142,7 @@ function ProjectPage() {
                     {section.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-lg">
                         <span
-                          className={`mt-1 shrink-0 text-sm leading-none ${isSaints ? 'text-saints-dark' : isEsclub ? 'text-rise-dark' : 'text-fuchsia'}`}
+                          className={`mt-1 shrink-0 text-sm leading-none ${isSaints ? 'text-saints-dark' : isEsclub ? 'text-rise-dark' : isLIS ? 'text-lis' : 'text-fuchsia'}`}
                           aria-hidden="true"
                         >
                           ★
