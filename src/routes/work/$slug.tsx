@@ -200,21 +200,35 @@ function ProjectPage() {
             {section.videos && <VideoGrid videos={section.videos} />}
 
             {section.photos && section.photos.length > 0 && (
-              <ul className="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3">
-                {section.photos.map((photo, pi) => (
-                  <li
-                    key={photo.src}
-                    className={`brutal mb-6 break-inside-avoid p-2 ${pi % 3 === 0 ? '-rotate-1' : pi % 3 === 1 ? 'rotate-1' : ''}`}
-                  >
-                    <Img
-                      src={photo.src}
-                      alt={photo.alt}
-                      width={480}
-                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                      className="w-full"
-                    />
-                  </li>
-                ))}
+              <ul
+                className={
+                  project.slug === 'cie' && section.heading === 'CIE Creative & Community Highlights'
+                    ? 'mt-12 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3'
+                    : 'mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3'
+                }
+              >
+                {section.photos.map((photo, pi) => {
+                  const equalHeightCieGallery =
+                    project.slug === 'cie' && section.heading === 'CIE Creative & Community Highlights'
+                  return (
+                    <li
+                      key={photo.src}
+                      className={
+                        equalHeightCieGallery
+                          ? 'brutal flex h-[320px] items-center justify-center overflow-hidden bg-white p-3 sm:h-[340px]'
+                          : `brutal mb-6 break-inside-avoid p-2 ${pi % 3 === 0 ? '-rotate-1' : pi % 3 === 1 ? 'rotate-1' : ''}`
+                      }
+                    >
+                      <Img
+                        src={photo.src}
+                        alt={photo.alt}
+                        width={480}
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                        className={equalHeightCieGallery ? 'h-full w-full object-contain' : 'w-full'}
+                      />
+                    </li>
+                  )
+                })}
               </ul>
             )}
           </section>
