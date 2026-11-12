@@ -294,16 +294,6 @@ export const projects: Project[] = [
           'Served as Technical Director for the Grand Finals LAN broadcast, overseeing the live technical execution.',
         ],
       },
-      {
-        heading: 'Broadcast & Production',
-        role: 'Group-stage B-stream direction · Broadcast coordination',
-        body: 'I directed and switched secondary broadcasts during the group stage and helped coordinate coverage with tournament staff and on-air talent. The production work supported the wider goal of making competitive League of Legends accessible to the community watching and participating.',
-        bullets: [
-          'Directed and switched B-stream broadcasts during the group stage.',
-          'Supported staffing, schedules and broadcast planning to keep match coverage organized.',
-          'Collaborated with tournament and production teams across match days and the LAN finals.',
-        ],
-      },
     ],
   },
   {
