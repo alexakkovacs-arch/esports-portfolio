@@ -28,7 +28,7 @@ export function ProjectCard({
           {project.roles[0]}
         </span>
       </div>
-      <div className="relative aspect-[4/5] overflow-hidden border-b-[3px] border-ink bg-ink">
+      <div className={`relative aspect-[4/5] overflow-hidden border-b-[3px] border-ink ${project.slug === "league-impact-series" ? "bg-white" : "bg-ink"}`}>
         <Img
           src={
             (project.slug === 'league-impact-series' || project.slug === 'st-clair-saints') && project.logo
@@ -37,14 +37,14 @@ export function ProjectCard({
           }
           alt={
             project.slug === 'league-impact-series'
-              ? 'League Impact Series logo on a black background'
+              ? 'League Impact Series logo on a white background'
               : project.slug === 'st-clair-saints'
                 ? 'St. Clair Saints esports logo on a black background'
                 : project.cover.alt
           }
           width={520}
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-          className={`relative size-full transition-transform duration-500 group-hover:scale-105 ${project.slug === 'league-impact-series' || project.slug === 'st-clair-saints' ? 'object-contain p-8 sm:p-10' : project.slug === 'clol-championships' ? 'object-contain p-6' : project.slug === 'na-rise-na-premier' ? 'object-contain p-8' : 'object-cover'}`}
+          className={`relative size-full transition-transform duration-500 group-hover:scale-105 ${project.slug === 'league-impact-series' ? 'object-contain p-8 sm:p-10' : project.slug === 'st-clair-saints' ? 'object-contain p-2 sm:p-3' : project.slug === 'clol-championships' ? 'object-contain p-6' : project.slug === 'na-rise-na-premier' ? 'object-contain p-8' : 'object-cover'}`}
         />
       </div>
       <div className="flex items-start justify-between gap-3 p-5">
