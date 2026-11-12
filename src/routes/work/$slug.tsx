@@ -39,7 +39,7 @@ function ProjectPage() {
           src={assetUrl('/img/shapes/burst-blue.svg')}
           alt=""
           aria-hidden="true"
-          className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70 ${isSaints ? 'saints-burst' : ''}`}
+          className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow ${isLIS ? 'brightness-0 opacity-100' : 'opacity-70'} ${isSaints ? 'saints-burst' : ''}`}
         />
         <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints || isLIS ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
           <div>
