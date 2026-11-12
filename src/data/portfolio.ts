@@ -197,11 +197,7 @@ export const projects: Project[] = [
       alt: 'esclub.gg NA Rise tournament format explainer, designed to communicate the competition structure to players',
     },
     stats: [
-      { value: '24', label: 'NA Rise · Season 1 teams' },
-      { value: '20', label: 'LQL · Season 1 teams' },
-      { value: '10', label: 'NA Premier teams' },
-      { value: '14', label: 'NA Rise · Season 2 teams' },
-      { value: '20', label: 'LQL · Season 2 teams' },
+      { value: '88', label: 'Team participations · All competitions' },
     ],
     sections: [
       {
