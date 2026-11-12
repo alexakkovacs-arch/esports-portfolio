@@ -49,9 +49,19 @@ function ProjectPage() {
               <ArrowLeft size={14} aria-hidden="true" /> All projects
             </Link>
             <p className="eyebrow mt-10">{project.org}</p>
-            <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
-              {project.title}
-            </h1>
+            <div className={isSaints ? 'mt-3 flex items-center gap-4 sm:gap-6' : 'mt-3'}>
+              <h1 className={`display min-w-0 ${isSaints ? 'flex-1 text-[clamp(3.2rem,7vw,7rem)]' : 'text-[clamp(3.5rem,10vw,8rem)]'}`}>
+                {project.title}
+              </h1>
+              {isSaints && project.logo && (
+                <Img
+                  src={project.logo}
+                  alt="St. Clair Saints Esports logo"
+                  width={200}
+                  className="h-24 w-24 shrink-0 object-contain sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+                />
+              )}
+            </div>
             <ul className="mt-6 flex flex-wrap gap-2">
               {project.roles.map((r) => (
                 <li
@@ -86,16 +96,6 @@ function ProjectPage() {
               sizes="(min-width: 1024px) 420px, 90vw"
               className="aspect-[4/5] w-full object-cover"
             />
-            {isSaints && project.logo && (
-              <div className="absolute -bottom-5 -left-5 z-10 -rotate-6 border-[3px] border-ink bg-cream p-3 shadow-[5px_5px_0_0_var(--saints-green)] sm:-left-10">
-                <Img
-                  src={project.logo}
-                  alt="St. Clair Saints Esports logo"
-                  width={220}
-                  className="h-24 w-32 object-contain sm:w-40"
-                />
-              </div>
-            )}
           </figure>
         </div>
       </header>

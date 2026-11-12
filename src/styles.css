@@ -14,8 +14,8 @@
   --fuchsia: #ff86c8;
   --fuchsia-hot: #ff4fae;
   --gold: #eaa93d;
-  --saints-green: #7bc34a;
-  --saints-green-dark: #316f29;
+  --saints-green: #78b255;
+  --saints-green-dark: #285b24;
   --steel: #6e96b3;
   --tan: #e3b99f;
 
@@ -193,7 +193,7 @@
   }
 
   .saints-page .tape::before {
-    background: rgb(123 195 74 / 0.83);
+    background: rgb(120 178 85 / 0.83);
   }
   .saints-page .saints-burst {
     filter: hue-rotate(82deg) saturate(0.85);

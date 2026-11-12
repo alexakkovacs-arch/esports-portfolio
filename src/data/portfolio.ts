@@ -103,7 +103,7 @@ export const projects: Project[] = [
       {
         heading: 'Events & Community',
         role: 'Event planning, community experiences and activations',
-        body: 'I bring players and fans together through in-person experiences: large festivals, collegiate competitions, campus gaming events and community activations. My St. Clair work also includes League of Legends Worlds watch parties, Winter WonderLAN, ARAM Mayhem, TFT tournaments and leading esports camp activities.',
+        body: 'I bring players and fans together through in-person experiences: festivals, collegiate competitions, and student-led gaming events. Alongside large events, I have organized TFT and ARAM tournaments, League of Legends Worlds watch parties, and other community activities that help students connect. I also support Winter WonderLAN and lead esports camp activities.',
         events: [
           {
             title: 'Sakura Anime Fest',
@@ -128,11 +128,11 @@ export const projects: Project[] = [
             photo: { src: img('sgs-group.jpg'), alt: 'Saints Gauntlet Series competitors and event staff posing together' },
           },
           {
-            title: 'Canadian Intercollegiate Exhibition',
-            year: '2026',
-            role: 'Social Director · Production',
-            description: 'Led social content and event coverage for a Canadian collegiate esports exhibition, coordinating promotional updates and broadcast deliverables.',
-            photo: { src: img('cie-stage.jpg'), alt: 'Presenters at the Canadian Intercollegiate Exhibition event stage' },
+            title: 'Student Events',
+            year: '2024–2026',
+            role: 'Community Events · Tournament Organizing · Student Engagement',
+            description: 'Organized and supported campus gaming activities that bring students together, including Teamfight Tactics (TFT) tournaments, League of Legends ARAM tournaments, Worlds watch parties and other esports community gatherings.',
+            photo: { src: img('saints-tft-group.jpg'), alt: 'Students gathered together at a St. Clair College Teamfight Tactics tournament' },
           },
         ],
       },
