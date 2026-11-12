@@ -127,11 +127,16 @@ function ProjectPage() {
               <div className="text-lg leading-relaxed">
                 {section.body && <p className="max-w-2xl">{section.body}</p>}
                 {section.bullets && (
-                  <ul className="max-w-2xl space-y-3">
+                  <ul className="mt-6 max-w-2xl list-none space-y-3">
                     {section.bullets.map((b) => (
-                      <li key={b} className="flex gap-3">
-                        <span className={`mt-0.5 ${isSaints ? 'text-saints-dark' : 'text-fuchsia-hot'}`} aria-hidden="true">✺</span>
-                        {b}
+                      <li key={b} className="flex items-start gap-3 text-lg">
+                        <span
+                          className={`mt-0.5 shrink-0 text-2xl leading-none ${isSaints ? 'text-saints-dark' : 'text-fuchsia'}`}
+                          aria-hidden="true"
+                        >
+                          ✺
+                        </span>
+                        <span>{b}</span>
                       </li>
                     ))}
                   </ul>
