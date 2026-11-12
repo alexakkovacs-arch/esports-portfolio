@@ -30,7 +30,7 @@ function ProjectPage() {
   const isEsclub = project.slug === 'na-rise-na-premier'
 
   return (
-    <article className={isSaints ? 'saints-page' : undefined}>
+    <article className={isSaints ? 'saints-page' : isEsclub ? 'rise-page' : undefined}>
       <header
         className={`relative overflow-hidden border-b-[3px] border-ink ${accentBg[project.accent]} ${darkAccent ? 'text-cream' : 'text-ink'}`}
       >
@@ -131,7 +131,7 @@ function ProjectPage() {
                     {section.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-lg">
                         <span
-                          className={`mt-0.5 shrink-0 text-2xl leading-none ${isSaints ? 'text-saints-dark' : 'text-fuchsia'}`}
+                          className={`mt-0.5 shrink-0 text-2xl leading-none ${isSaints ? 'text-saints-dark' : isEsclub ? 'text-rise-dark' : 'text-fuchsia'}`}
                           aria-hidden="true"
                         >
                           ✺

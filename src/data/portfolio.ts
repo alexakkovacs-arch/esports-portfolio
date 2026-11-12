@@ -3,7 +3,7 @@
  * awards, partners and skills. Images are paths under /public.
  */
 
-export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints'
+export type Accent = 'fuchsia' | 'gold' | 'steel' | 'tan' | 'ink' | 'saints' | 'rise'
 
 export type Photo = { src: string; alt: string }
 
@@ -189,18 +189,25 @@ export const projects: Project[] = [
     roles: ['Head of Marketing'],
     tags: ['Community Management', 'Marketing', 'Tournament Operations', 'Player Relations'],
     summary:
-      'Leading marketing, player communications and community-focused campaigns for esclub.gg League of Legends competitions, including NA Rise and NA Premier.',
-    accent: 'steel',
+      'Leading marketing, player communications and community campaigns for esclub.gg League of Legends competitions, including NA Rise, LQL and NA Premier.',
+    accent: 'rise',
     logo: img('logos/na-rise.svg'),
     cover: {
       src: img('na-rise-format-explainer.webp'),
       alt: 'esclub.gg NA Rise tournament format explainer, designed to communicate the competition structure to players',
     },
+    stats: [
+      { value: '24', label: 'NA Rise · Season 1 teams' },
+      { value: '20', label: 'LQL · Season 1 teams' },
+      { value: '10', label: 'NA Premier teams' },
+      { value: '14', label: 'NA Rise · Season 2 teams' },
+      { value: '20', label: 'LQL · Season 2 teams' },
+    ],
     sections: [
       {
         heading: 'Building the Community',
         role: 'Head of Marketing · esclub.gg',
-        body: 'esclub.gg brings competitive League of Legends players together through organized community tournaments, including NA Rise and NA Premier. As Head of Marketing on a four-person team, I help connect players with these opportunities through outreach, clear communications, engaging content and day-to-day community support.',
+        body: 'esclub.gg brings competitive League of Legends players together through organized community leagues and tournaments, including NA Rise, LQL and NA Premier. As Head of Marketing on a four-person team, I help connect players with these opportunities through outreach, clear communications, engaging content and day-to-day community support.',
         bullets: [
           'Lead player outreach, tournament announcements and community-facing communications.',
           'Coordinate with creators, co-streamers and partners to extend tournament reach and participation.',
@@ -441,6 +448,7 @@ export const accentBg: Record<Accent, string> = {
   fuchsia: 'bg-fuchsia',
   gold: 'bg-gold',
   saints: 'bg-saints',
+  rise: 'bg-rise',
   steel: 'bg-steel',
   tan: 'bg-tan',
   ink: 'bg-ink',

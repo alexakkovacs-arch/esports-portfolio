@@ -16,6 +16,8 @@
   --gold: #eaa93d;
   --saints-green: #78b255;
   --saints-green-dark: #285b24;
+  --rise-blue: #49b0d3;
+  --rise-blue-dark: #087698;
   --steel: #6e96b3;
   --tan: #e3b99f;
 
@@ -54,6 +56,8 @@
   --color-gold: var(--gold);
   --color-saints: var(--saints-green);
   --color-saints-dark: var(--saints-green-dark);
+  --color-rise: var(--rise-blue);
+  --color-rise-dark: var(--rise-blue-dark);
   --color-steel: var(--steel);
   --color-tan: var(--tan);
 
@@ -192,6 +196,9 @@
     box-shadow: 6px 6px 0 0 var(--fuchsia);
   }
 
+  .rise-page .tape::before {
+    background: rgb(73 176 211 / 0.83);
+  }
   .saints-page .tape::before {
     background: rgb(120 178 85 / 0.83);
   }
