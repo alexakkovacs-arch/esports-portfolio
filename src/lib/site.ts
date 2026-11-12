@@ -13,8 +13,8 @@ export const site = {
   },
 }
 
-export function pageMeta(title: string, description: string) {
-  const fullTitle = `${title} | ${site.name}`
+export function pageMeta(title: string, description: string, browserTitle?: string) {
+  const fullTitle = browserTitle ?? `${title} | ${site.name}`
   return {
     meta: [
       { title: fullTitle },
