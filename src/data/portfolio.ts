@@ -200,8 +200,8 @@ export const projects: Project[] = [
     accent: 'rise',
     logo: img('logos/na-rise-original.svg'),
     cover: {
-      src: img('na-rise-format-explainer.webp'),
-      alt: 'esclub.gg NA Rise tournament format explainer, designed to communicate the competition structure to players',
+      src: img('logos/na-rise-original.svg'),
+      alt: 'Official NA Rise logo centered on a black background',
     },
     stats: [
       { value: '88', label: 'Team participations · All competitions' },

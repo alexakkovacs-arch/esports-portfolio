@@ -106,7 +106,7 @@ function ProjectPage() {
               </dl>
             )}
           </div>
-          <figure className={`brutal relative mx-auto w-full rotate-2 p-3 ${isLIS ? 'mt-32 sm:mt-40' : 'tape'} ${isSaints || isLIS ? 'max-w-[640px]' : isCie ? 'max-w-[400px]' : 'max-w-md'}`}>
+          <figure className={`brutal relative mx-auto w-full rotate-2 p-3 ${isLIS ? 'mt-32 sm:mt-40' : isEsclub ? 'bg-ink' : 'tape'} ${isSaints || isLIS ? 'max-w-[640px]' : isCie ? 'max-w-[400px]' : 'max-w-md'}`}>
             <Img
               src={project.cover.src}
               alt={project.cover.alt}
@@ -114,7 +114,7 @@ function ProjectPage() {
               loading="eager"
               fetchPriority="high"
               sizes={isSaints || isLIS ? '(min-width: 1024px) 50vw, 90vw' : isCie ? '(min-width: 1024px) 400px, 90vw' : '(min-width: 1024px) 420px, 90vw'}
-              className={isSaints || isLIS || isCie ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
+              className={isSaints || isLIS || isCie ? 'block h-auto w-full' : isEsclub ? 'aspect-[4/5] w-full object-contain p-6 sm:p-10' : 'aspect-[4/5] w-full object-cover'}
             />
             {isSaints && project.logo && (
               <Img
