@@ -300,23 +300,58 @@ export const projects: Project[] = [
     slug: 'cie',
     title: 'CIE',
     org: 'Canadian Intercollegiate Exhibition',
-    roles: ['Production & Events'],
-    tags: ['Live Events', 'Production'],
+    roles: ['Social Director', 'Broadcast Producer', 'Technical Director'],
+    tags: ['Social Media Strategy', 'Event Coverage', 'Broadcast Production', 'Sponsor Activations'],
     summary:
-      'A national exhibition bringing Canadian college esports programs to one stage.',
+      'Led social media direction, event coverage and sponsor content for CIE 2026 while producing and technical directing collegiate esports broadcasts.',
     accent: 'fuchsia',
     logo: img('logos/cie.png'),
     cover: {
       src: img('cie-2026-cover.webp'),
-      alt: 'Canadian Intercollegiate Exhibition 2026 promotional poster featuring competitive game characters',
+      alt: 'CIE 2026 Canadian Intercollegiate Exhibition We Are Coming Back promotional poster',
     },
     sections: [
       {
-        heading: 'Canadian Intercollegiate Exhibition',
-        body: 'Live event and production work for the Canadian Intercollegiate Exhibition.',
+        heading: 'Social Direction & Marketing',
+        role: 'Social Director · May 2026',
+        body: 'As Social Director for the 2026 Canadian Intercollegiate Exhibition, I managed social media direction, scheduling and live coverage for a multi-title collegiate esports event. I coordinated with event organizers, creatives and broadcast teams to keep announcements, programming and sponsor messaging consistent throughout the event.',
+        bullets: [
+          'Planned and scheduled social content, from pre-event promotion to daily updates and results.',
+          'Coordinated social deliverables and event coverage across staff and production teams.',
+          'Created and directed announcements, schedules, graphics and sponsor-related posts for collegiate audiences.',
+        ],
         photos: [
-          { src: img('cie-2026-cover.webp'), alt: 'Presenters on stage at the exhibition' },
-          { src: img('group-blue-stage.jpg'), alt: 'Competitors and staff group photo on a blue-lit stage' },
+          { src: img('cie-2026-cover.webp'), alt: 'CIE 2026 tournament promotional artwork used for event marketing' },
+        ],
+      },
+      {
+        heading: 'Live Event Coverage',
+        role: 'Community Communications · Multi-Game Coverage',
+        body: 'I kept viewers and participants informed throughout CIE through timely schedules, results, live updates and streaming information. Coverage spanned League of Legends, VALORANT, Overwatch and Rocket League, alongside educational and community programming such as casting, esports careers and financial literacy sessions.',
+        bullets: [
+          'Delivered game-day schedules, live-now updates, match results and stream announcements.',
+          'Promoted competitions and panels so students and fans could discover what was happening across the event.',
+          'Helped connect the event experience across social channels, tournaments and broadcasts.',
+        ],
+      },
+      {
+        heading: 'Broadcast Production',
+        role: 'Broadcast Producer · Technical Director',
+        body: 'Alongside my marketing responsibilities, I worked as a Broadcast Producer and Technical Director for CIE 2026, including directing League of Legends streams. My production work supported broadcast operations and live esports coverage across the event’s competitive titles.',
+        bullets: [
+          'Directed live League of Legends broadcasts and handled technical switching and show execution.',
+          'Collaborated with broadcast crew and event organizers on production schedules and live coverage.',
+          'Supported a consistent viewing experience across a multi-game collegiate event.',
+        ],
+      },
+      {
+        heading: 'Sponsors & Activations',
+        role: 'Partner Communications · BMO Title Sponsor',
+        body: 'Sponsor visibility was part of the event experience. I supported social and promotional deliverables featuring BMO, CIE 2026’s title sponsor, and communicated partner programming and giveaways to make those activations visible and accessible to viewers.',
+        bullets: [
+          'Supported title-sponsor visibility and promotion of BMO Financial Literacy programming.',
+          'Promoted partner activity, including a ONEofZERO giveaway of six premium gaming mice during event streams.',
+          'Worked sponsor-related content into the broader event communication and posting schedule.',
         ],
       },
     ],
