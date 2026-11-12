@@ -233,16 +233,6 @@ export const projects: Project[] = [
           'Helped keep participants informed about tournament rules, updates and expectations.',
         ],
       },
-      {
-        heading: 'Putting Players First Through Stats',
-        role: 'League statistics · Player recognition · Social storytelling',
-        body: 'The esclub.gg website brings together competitive match results, individual performance statistics, team standings and player rankings. My role is not building the website or developing its statistics systems; I use the information they provide to create social media content that puts players in the spotlight. From Top 5 laners and weekly results to standout performances, these posts turn numbers into stories that recognize competitors and encourage the community to follow along.',
-        bullets: [
-          'Use the website’s player statistics and rankings to develop performance spotlights and Top 5 social graphics.',
-          'Share weekly match results and competitive updates that give teams and players visibility.',
-          'Promote official broadcasts and community co-streams so players and fans can connect with the action.',
-        ],
-      },
     ],
   },
   {
