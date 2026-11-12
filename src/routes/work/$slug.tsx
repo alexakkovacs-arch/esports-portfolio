@@ -39,7 +39,7 @@ function ProjectPage() {
           aria-hidden="true"
           className={`pointer-events-none absolute -right-24 -top-24 w-80 animate-spin-slow opacity-70 ${isSaints ? 'saints-burst' : ''}`}
         />
-        <div className="relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:py-20">
+        <div className={`relative mx-auto grid max-w-7xl items-end gap-12 px-4 py-14 sm:px-6 lg:py-20 ${isSaints ? 'lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]' : 'lg:grid-cols-[1.3fr_1fr]'}`}>
           <div>
             <Link
               to="/"
@@ -49,19 +49,9 @@ function ProjectPage() {
               <ArrowLeft size={14} aria-hidden="true" /> All projects
             </Link>
             <p className="eyebrow mt-10">{project.org}</p>
-            <div className={isSaints ? 'mt-3 flex items-center gap-4 sm:gap-6' : 'mt-3'}>
-              <h1 className={`display min-w-0 ${isSaints ? 'flex-1 text-[clamp(3.2rem,7vw,7rem)]' : 'text-[clamp(3.5rem,10vw,8rem)]'}`}>
-                {project.title}
-              </h1>
-              {isSaints && project.logo && (
-                <Img
-                  src={project.logo}
-                  alt="St. Clair Saints Esports logo"
-                  width={200}
-                  className="h-24 w-24 shrink-0 object-contain sm:h-32 sm:w-32 lg:h-36 lg:w-36"
-                />
-              )}
-            </div>
+            <h1 className="display mt-3 text-[clamp(3.5rem,10vw,8rem)]">
+              {project.title}
+            </h1>
             <ul className="mt-6 flex flex-wrap gap-2">
               {project.roles.map((r) => (
                 <li
@@ -86,16 +76,24 @@ function ProjectPage() {
               </dl>
             )}
           </div>
-          <figure className="brutal tape relative mx-auto w-full max-w-md rotate-2 p-3">
+          <figure className={`brutal tape relative mx-auto w-full rotate-2 p-3 ${isSaints ? 'max-w-[640px]' : 'max-w-md'}`}>
             <Img
               src={project.cover.src}
               alt={project.cover.alt}
-              width={480}
+              width={isSaints ? 760 : 480}
               loading="eager"
               fetchPriority="high"
-              sizes="(min-width: 1024px) 420px, 90vw"
-              className="aspect-[4/5] w-full object-cover"
+              sizes={isSaints ? '(min-width: 1024px) 50vw, 90vw' : '(min-width: 1024px) 420px, 90vw'}
+              className={isSaints ? 'block h-auto w-full' : 'aspect-[4/5] w-full object-cover'}
             />
+            {isSaints && project.logo && (
+              <Img
+                src={project.logo}
+                alt="St. Clair Saints Esports logo"
+                width={150}
+                className="absolute bottom-5 right-5 z-10 h-auto w-20 object-contain drop-shadow-lg sm:w-28 lg:w-32"
+              />
+            )}
           </figure>
         </div>
       </header>
